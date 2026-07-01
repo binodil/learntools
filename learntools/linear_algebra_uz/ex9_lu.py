@@ -1,9 +1,9 @@
 """Hints and solutions — Dars 2.6: Eliminatsiya = Parchalash: A = LU."""
 import numpy as np
-from learntools.core import EqualityCheckProblem, ThoughtExperiment
+from learntools.linear_algebra_uz.base import UzCheckProblem, ThoughtExperiment
 
 
-class Q1(EqualityCheckProblem):
+class Q1(UzCheckProblem):
     """scipy bilan LU parchalash."""
     _hints = [
         "from scipy.linalg import lu",
@@ -25,7 +25,7 @@ class Q1(EqualityCheckProblem):
         return True
 
 
-class Q2(EqualityCheckProblem):
+class Q2(UzCheckProblem):
     """LU dan foydalanib Ax=b yechimini toping."""
     _hints = [
         "PA = LU → PAx = Pb → L(Ux) = Pb",
@@ -61,7 +61,7 @@ class Q3(ThoughtExperiment):
     )
 
 
-class Q4(EqualityCheckProblem):
+class Q4(UzCheckProblem):
     """Oddiy 3x3 uchun qo'lda L va U topish."""
     _hints = [
         "A = [[2,1,1],[4,3,3],[8,7,9]] uchun hisoblang.",
@@ -79,7 +79,7 @@ class Q4(EqualityCheckProblem):
 
 
 # Challenge 1
-class C1_Q1(EqualityCheckProblem):
+class C1_Q1(UzCheckProblem):
     """Ko'p b lar uchun LU samaradorligi."""
     _hints = [
         "LU bir marta hisoblang, ko'p b lar uchun ishlatavering.",

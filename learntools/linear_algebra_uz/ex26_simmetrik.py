@@ -1,9 +1,9 @@
 """Hints and solutions — Dars 6.4: Simmetrik Matritsalar."""
 import numpy as np
-from learntools.core import EqualityCheckProblem, ThoughtExperiment
+from learntools.linear_algebra_uz.base import UzCheckProblem, ThoughtExperiment
 
 
-class Q1(EqualityCheckProblem):
+class Q1(UzCheckProblem):
     """A simmetrikmi tekshiring."""
     _hints = [
         "A simmetrik bo'lsa A = Aᵀ. np.allclose(A, A.T) dan foydalaning.",
@@ -17,7 +17,7 @@ class Q1(EqualityCheckProblem):
         return True
 
 
-class Q2(EqualityCheckProblem):
+class Q2(UzCheckProblem):
     """Simmetrik matritsa uchun xususiy qiymatlar haqiqiy ekanini tasdiqlang."""
     _hints = [
         "A = Aᵀ bo'lsa, barcha xususiy qiymatlar haqiqiy son. np.linalg.eigh(A) — simmetrik uchun.",
@@ -34,7 +34,7 @@ class Q2(EqualityCheckProblem):
         return True
 
 
-class Q3(EqualityCheckProblem):
+class Q3(UzCheckProblem):
     """Spektral teorema: A = QΛQᵀ (simmetrik uchun)."""
     _hints = [
         "np.linalg.eigh(A) → (vals, Q). Keyin A_reconstructed = Q @ np.diag(vals) @ Q.T",
@@ -51,7 +51,7 @@ class Q3(EqualityCheckProblem):
         return True
 
 
-class Q4(EqualityCheckProblem):
+class Q4(UzCheckProblem):
     """Simmetrik uchun xususiy vektorlar ortogonal ekanini tekshiring."""
     _hints = [
         "np.linalg.eigh(A) → (vals, Q). Q ortonormal: Q.T @ Q = I.",
@@ -66,7 +66,7 @@ class Q4(EqualityCheckProblem):
         return True
 
 
-class Q5(EqualityCheckProblem):
+class Q5(UzCheckProblem):
     """AᵀA doim simmetrik va musbat yarim aniq ekanini tekshiring."""
     _hints = [
         "(AᵀA)ᵀ = AᵀA — simmetrik. Xususiy qiymatlar ≥ 0 — musbat yarim aniq.",
@@ -83,7 +83,7 @@ class Q5(EqualityCheckProblem):
         return True
 
 
-class Q6(EqualityCheckProblem):
+class Q6(UzCheckProblem):
     """Rayleigh kotirovkasi: R(x) = xᵀAx / xᵀx."""
     _hints = [
         "R(x) = (x.T @ A @ x) / (x.T @ x). Bu λ_min va λ_max orasida.",
@@ -101,7 +101,7 @@ class Q6(EqualityCheckProblem):
         return True
 
 
-class C1_Q1(EqualityCheckProblem):
+class C1_Q1(UzCheckProblem):
     """Simmetrik matritsa uchun spektral yoyilma: A = Σᵢ λᵢ qᵢ qᵢᵀ."""
     _hints = [
         "vals, Q = np.linalg.eigh(A). Keyin A = sum(vals[i] * outer(Q[:,i], Q[:,i]) for i in range(n)).",

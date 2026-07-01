@@ -1,9 +1,9 @@
 """Hints and solutions — Dars 12.3: Ko'p O'zgaruvchili Gauss va Og'irlikli Kichik Kvadratlar."""
 import numpy as np
-from learntools.core import EqualityCheckProblem, ThoughtExperiment
+from learntools.linear_algebra_uz.base import UzCheckProblem, ThoughtExperiment
 
 
-class Q1(EqualityCheckProblem):
+class Q1(UzCheckProblem):
     """N(mu, Sigma) taqsimotidan namunalar oling."""
     _hints = ["np.random.multivariate_normal(mu, Sigma, size=n)."]
     _solution = "X = np.random.multivariate_normal(mu, Sigma, size=n)"
@@ -16,7 +16,7 @@ class Q1(EqualityCheckProblem):
         return True
 
 
-class Q2(EqualityCheckProblem):
+class Q2(UzCheckProblem):
     """Ko'p o'zgaruvchili Gauss zichligi: p(x) = exp(-0.5*(x-mu)ᵀΣ⁻¹(x-mu)) / sqrt(...)."""
     _hints = [
         "scipy.stats.multivariate_normal(mean=mu, cov=Sigma).pdf(x).",
@@ -34,7 +34,7 @@ class Q2(EqualityCheckProblem):
         return True
 
 
-class Q3(EqualityCheckProblem):
+class Q3(UzCheckProblem):
     """Marginal taqsimot: N(mu_1, Sigma_11) — birinchi komponent."""
     _hints = [
         "Ko'p o'zgaruvchili Gauss marginal taqsimoti ham normal: N(mu[0], Sigma[0,0]).",
@@ -49,7 +49,7 @@ class Q3(EqualityCheckProblem):
         return True
 
 
-class Q4(EqualityCheckProblem):
+class Q4(UzCheckProblem):
     """Shartli taqsimot: p(x2|x1) — Gauss shartli formula."""
     _hints = [
         "mu_2|1 = mu2 + Sigma_21 @ inv(Sigma_11) @ (x1 - mu1).",
@@ -70,7 +70,7 @@ class Q4(EqualityCheckProblem):
         return True
 
 
-class Q5(EqualityCheckProblem):
+class Q5(UzCheckProblem):
     """Og'irlikli kichik kvadratlar (WLS): min sum(w_i*(y_i - x_iᵀb)^2)."""
     _hints = [
         "W = diag(w). Normal tenglama: XᵀWX b = XᵀWy.",
@@ -89,7 +89,7 @@ class Q5(EqualityCheckProblem):
         return True
 
 
-class Q6(EqualityCheckProblem):
+class Q6(UzCheckProblem):
     """MLE uchun kovariatsiya matritsasini baholang: Sigma_hat = (1/n) Xc.T @ Xc."""
     _hints = ["Sigma_hat = Xc.T @ Xc / n. OLS + Gauss shovqin uchun MLE."]
     _solution = "Xc = X - X.mean(axis=0); Sigma_hat = Xc.T @ Xc / len(X)"
@@ -102,7 +102,7 @@ class Q6(EqualityCheckProblem):
         return True
 
 
-class C1_Q1(EqualityCheckProblem):
+class C1_Q1(UzCheckProblem):
     """Kalman filtri: predict va update qadamlari."""
     _hints = [
         "Predict: x_pred = F @ x, P_pred = F @ P @ F.T + Q.",

@@ -1,9 +1,9 @@
 """Hints and solutions — Dars 1.2: Uzunlik va Skalyar Ko'paytma."""
 import numpy as np
-from learntools.core import EqualityCheckProblem, ThoughtExperiment
+from learntools.linear_algebra_uz.base import UzCheckProblem, ThoughtExperiment
 
 
-class Q1(EqualityCheckProblem):
+class Q1(UzCheckProblem):
     """Vektor uzunligini hisoblang."""
     _hints = [
         "||v|| = sqrt(v1^2 + v2^2 + ... + vn^2)",
@@ -18,7 +18,7 @@ class Q1(EqualityCheckProblem):
         return True
 
 
-class Q2(EqualityCheckProblem):
+class Q2(UzCheckProblem):
     """Skalyar ko'paytma (dot product)."""
     _hints = [
         "u · v = u1*v1 + u2*v2 + ... + un*vn",
@@ -33,7 +33,7 @@ class Q2(EqualityCheckProblem):
         return True
 
 
-class Q3(EqualityCheckProblem):
+class Q3(UzCheckProblem):
     """Vektorni normalashtiring (unit vector)."""
     _hints = [
         "Unit vektor: û = v / ||v||",
@@ -50,7 +50,7 @@ class Q3(EqualityCheckProblem):
         return True
 
 
-class Q4(EqualityCheckProblem):
+class Q4(UzCheckProblem):
     """Ikki vektor orasidagi burchakni toping."""
     _hints = [
         "cos(θ) = (u · v) / (||u|| * ||v||)",
@@ -69,7 +69,7 @@ class Q4(EqualityCheckProblem):
         return True
 
 
-class Q5(EqualityCheckProblem):
+class Q5(UzCheckProblem):
     """Perpendikulyarlikni tekshiring."""
     _hints = [
         "Ikkita vektor perpendikulyar bo'lsa, ularning skalyar ko'paytmasi 0 ga teng.",
@@ -84,7 +84,7 @@ class Q5(EqualityCheckProblem):
         return True
 
 
-class Q6(EqualityCheckProblem):
+class Q6(UzCheckProblem):
     """Proyeksiya hisoblang."""
     _hints = [
         "v ni a yo'nalishiga proyeksiyasi: proj = (v · a / ||a||^2) * a",
@@ -100,7 +100,7 @@ class Q6(EqualityCheckProblem):
 
 
 # Challenge 1
-class C1_Q1(EqualityCheckProblem):
+class C1_Q1(UzCheckProblem):
     """Cosine o'xshashligi."""
     _hints = [
         "Cosine similarity = (u · v) / (||u|| * ||v||) — bu -1 dan 1 gacha.",

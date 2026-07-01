@@ -1,9 +1,9 @@
 """Hints and solutions — Dars 9.3: Tez Furye Transformatsiyasi (FFT)."""
 import numpy as np
-from learntools.core import EqualityCheckProblem, ThoughtExperiment
+from learntools.linear_algebra_uz.base import UzCheckProblem, ThoughtExperiment
 
 
-class Q1(EqualityCheckProblem):
+class Q1(UzCheckProblem):
     """DFT ni to'g'ridan-to'g'ri matritsa ko'paytmasi orqali hisoblang."""
     _hints = [
         "DFT[k] = Σ x[n] e^{-2πikn/N}. Matritsa: F[k,n] = e^{-2πikn/N}.",
@@ -23,7 +23,7 @@ class Q1(EqualityCheckProblem):
         return True
 
 
-class Q2(EqualityCheckProblem):
+class Q2(UzCheckProblem):
     """np.fft.fft bilan DFT ni hisoblang va tezlikni solishtiring."""
     _hints = ["X = np.fft.fft(x) — FFT yordamida DFT."]
     _solution = "X = np.fft.fft(x)"
@@ -35,7 +35,7 @@ class Q2(EqualityCheckProblem):
         return True
 
 
-class Q3(EqualityCheckProblem):
+class Q3(UzCheckProblem):
     """Teskari FFT: x = IFFT(X)."""
     _hints = ["np.fft.ifft(X) — teskari FFT."]
     _solution = "x_rec = np.fft.ifft(X)"
@@ -50,7 +50,7 @@ class Q3(EqualityCheckProblem):
         return True
 
 
-class Q4(EqualityCheckProblem):
+class Q4(UzCheckProblem):
     """Chastota spektrini hisoblang va dominant chastotani toping."""
     _hints = [
         "freqs = np.fft.fftfreq(N, d=1/fs). Dominant: freqs[np.argmax(np.abs(X))].",
@@ -70,7 +70,7 @@ class Q4(EqualityCheckProblem):
         return True
 
 
-class Q5(EqualityCheckProblem):
+class Q5(UzCheckProblem):
     """FFT bilan shovqinli signalni filtrlang (past chastotalar)."""
     _hints = [
         "X = fft(x). Yuqori chastotalarni nolga tenglang (|freq| > cutoff). Keyin ifft.",
@@ -94,7 +94,7 @@ class Q5(EqualityCheckProblem):
         return True
 
 
-class Q6(EqualityCheckProblem):
+class Q6(UzCheckProblem):
     """Parseval teoremasi: ||x||² = (1/N)||X||²."""
     _hints = [
         "Parseval: sum(|x[n]|²) = (1/N) sum(|X[k]|²).",
@@ -115,7 +115,7 @@ class Q6(EqualityCheckProblem):
         return True
 
 
-class C1_Q1(EqualityCheckProblem):
+class C1_Q1(UzCheckProblem):
     """2D FFT bilan rasm chastota tahlili."""
     _hints = [
         "np.fft.fft2(img) — 2D FFT. np.fft.fftshift — markazlashtirish.",

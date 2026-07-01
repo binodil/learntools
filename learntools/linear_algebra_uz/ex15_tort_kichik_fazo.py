@@ -1,9 +1,9 @@
 """Hints and solutions — Dars 3.5: To'rt Kichik Fazoning O'lchamlari."""
 import numpy as np
-from learntools.core import EqualityCheckProblem, ThoughtExperiment
+from learntools.linear_algebra_uz.base import UzCheckProblem, ThoughtExperiment
 
 
-class Q1(EqualityCheckProblem):
+class Q1(UzCheckProblem):
     """Ustun fazosi o'lchami = rank."""
     _hints = [
         "dim C(A) = rank(A).",
@@ -18,7 +18,7 @@ class Q1(EqualityCheckProblem):
         return True
 
 
-class Q2(EqualityCheckProblem):
+class Q2(UzCheckProblem):
     """Satr fazosi o'lchami = rank (= ustun fazosi o'lchami)."""
     _hints = [
         "dim C(A^T) = rank(A) = rank(A^T).",
@@ -33,7 +33,7 @@ class Q2(EqualityCheckProblem):
         return True
 
 
-class Q3(EqualityCheckProblem):
+class Q3(UzCheckProblem):
     """Nol fazo o'lchami = n - r."""
     _hints = [
         "dim N(A) = n - r, n = ustunlar soni.",
@@ -48,7 +48,7 @@ class Q3(EqualityCheckProblem):
         return True
 
 
-class Q4(EqualityCheckProblem):
+class Q4(UzCheckProblem):
     """Chap nol fazo o'lchami = m - r."""
     _hints = [
         "dim N(A^T) = m - r, m = satrlar soni.",
@@ -63,7 +63,7 @@ class Q4(EqualityCheckProblem):
         return True
 
 
-class Q5(EqualityCheckProblem):
+class Q5(UzCheckProblem):
     """O'lchamlar yig'indisi tekshiruvi: r + (n-r) = n."""
     _hints = [
         "R^n da: satr fazosi (r) + nol fazo (n-r) = n.",
@@ -77,7 +77,7 @@ class Q5(EqualityCheckProblem):
         return True
 
 
-class Q6(EqualityCheckProblem):
+class Q6(UzCheckProblem):
     """Harder: chap nol fazo vektorini topish (A^T x = 0)."""
     _hints = [
         "Chap nol fazo: A^T x = 0, ya'ni x^T A = 0.",
@@ -94,7 +94,7 @@ class Q6(EqualityCheckProblem):
 
 
 # Challenge 1
-class C1_Q1(EqualityCheckProblem):
+class C1_Q1(UzCheckProblem):
     """To'rt o'lchamni bitta to'plamga yig'ish va tekshirish."""
     _hints = [
         "(dim C(A), dim N(A), dim C(A^T), dim N(A^T)) = (r, n-r, r, m-r).",

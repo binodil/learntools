@@ -1,9 +1,9 @@
 """Hints and solutions — Dars 13.5: SGD va Adam Optimallashtiruvchilari."""
 import numpy as np
-from learntools.core import EqualityCheckProblem, ThoughtExperiment
+from learntools.linear_algebra_uz.base import UzCheckProblem, ThoughtExperiment
 
 
-class Q1(EqualityCheckProblem):
+class Q1(UzCheckProblem):
     """Mini-batch SGD: tasodifiy namuna olib gradient hisoblash."""
     _hints = [
         "idx = np.random.choice(n, batch_size, replace=False).",
@@ -23,7 +23,7 @@ class Q1(EqualityCheckProblem):
         return True
 
 
-class Q2(EqualityCheckProblem):
+class Q2(UzCheckProblem):
     """Adam optimallashtiruvchi: m, v moment yangilash va parametr qadam."""
     _hints = [
         "m = beta1*m + (1-beta1)*grad. v = beta2*v + (1-beta2)*grad**2.",
@@ -47,7 +47,7 @@ class Q2(EqualityCheckProblem):
         return True
 
 
-class Q3(EqualityCheckProblem):
+class Q3(UzCheckProblem):
     """RMSprop: eksponentsial o'rtacha kvadrat gradient."""
     _hints = [
         "v = gamma*v + (1-gamma)*grad**2. x = x - lr/sqrt(v+eps)*grad.",
@@ -66,7 +66,7 @@ class Q3(EqualityCheckProblem):
         return True
 
 
-class Q4(EqualityCheckProblem):
+class Q4(UzCheckProblem):
     """O'rganish tezligi jadval: cosine annealing."""
     _hints = [
         "lr_t = lr_min + 0.5*(lr_max - lr_min)*(1 + cos(pi*t/T)).",
@@ -84,7 +84,7 @@ class Q4(EqualityCheckProblem):
         return True
 
 
-class Q5(EqualityCheckProblem):
+class Q5(UzCheckProblem):
     """SGD bilan neural network parametrlarini yangilash."""
     _hints = [
         "Har bir parametr uchun: param -= lr * grad. Gradient autograd dan keladi.",
@@ -109,7 +109,7 @@ class Q5(EqualityCheckProblem):
         return True
 
 
-class Q6(EqualityCheckProblem):
+class Q6(UzCheckProblem):
     """SGD va GD konvergentsiyasini solishtiring: loss egri chiziqlari."""
     _hints = [
         "SGD: har mini-batch uchun gradient. GD: to'liq dataset gradient.",
@@ -141,7 +141,7 @@ class Q6(EqualityCheckProblem):
         return True
 
 
-class C1_Q1(EqualityCheckProblem):
+class C1_Q1(UzCheckProblem):
     """Adam vs SGD vs RMSprop: Rosenbrock funksiyasida solishtirish."""
     _hints = [
         "Rosenbrock: f(x,y) = (1-x)^2 + 100*(y-x^2)^2. Minimum: (1,1).",

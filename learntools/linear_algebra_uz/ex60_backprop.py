@@ -1,9 +1,9 @@
 """Hints and solutions — Dars 14.4: Backpropagation va Zanjir Qoidasi."""
 import numpy as np
-from learntools.core import EqualityCheckProblem, ThoughtExperiment
+from learntools.linear_algebra_uz.base import UzCheckProblem, ThoughtExperiment
 
 
-class Q1(EqualityCheckProblem):
+class Q1(UzCheckProblem):
     """Chiziqli qatlam Yakobiani: dy/dx = W."""
     _hints = [
         "y = W x + b uchun dy/dx = W.",
@@ -17,7 +17,7 @@ class Q1(EqualityCheckProblem):
         return True
 
 
-class Q2(EqualityCheckProblem):
+class Q2(UzCheckProblem):
     """Aktivatsiya Yakobiani diagonal: diag(sigma'(z)). ReLU."""
     _hints = [
         "ReLU' (z) = 1 agar z>0, aks holda 0.",
@@ -32,7 +32,7 @@ class Q2(EqualityCheckProblem):
         return True
 
 
-class Q3(EqualityCheckProblem):
+class Q3(UzCheckProblem):
     """Zanjir qoidasi: dz/dx = Jg @ Jf."""
     _hints = [
         "Kompozitsiya Yakobiani — Yakobianlar ko'paytmasi.",
@@ -47,7 +47,7 @@ class Q3(EqualityCheckProblem):
         return True
 
 
-class Q4(EqualityCheckProblem):
+class Q4(UzCheckProblem):
     """Kvadratik yo'qotish gradienti: dL/dyhat = yhat - y."""
     _hints = [
         "L = 0.5 * ||yhat - y||^2.",
@@ -62,7 +62,7 @@ class Q4(EqualityCheckProblem):
         return True
 
 
-class Q5(EqualityCheckProblem):
+class Q5(UzCheckProblem):
     """Og'irlik gradienti: dL/dW = outer(dz, x)."""
     _hints = [
         "z = W x bo'lsa, dL/dW = (dL/dz) x^T.",
@@ -77,7 +77,7 @@ class Q5(EqualityCheckProblem):
         return True
 
 
-class Q6(EqualityCheckProblem):
+class Q6(UzCheckProblem):
     """Sonli gradient (markaziy ayirma) bir komponent uchun."""
     _hints = [
         "df/dtheta ~ (f(theta+eps) - f(theta-eps)) / (2 eps).",
@@ -93,7 +93,7 @@ class Q6(EqualityCheckProblem):
 
 
 # Challenge 1
-class C1_Q1(EqualityCheckProblem):
+class C1_Q1(UzCheckProblem):
     """2 qatlamli tarmoq uchun dW1 ni orqaga tarqalish bilan toping."""
     _hints = [
         "Oldinga: z1=W1 x, a1=relu(z1), yhat=W2 a1.",

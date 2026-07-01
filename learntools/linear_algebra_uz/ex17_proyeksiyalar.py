@@ -1,9 +1,9 @@
 """Hints and solutions — Dars 4.2: Proyeksiyalar."""
 import numpy as np
-from learntools.core import EqualityCheckProblem, ThoughtExperiment
+from learntools.linear_algebra_uz.base import UzCheckProblem, ThoughtExperiment
 
 
-class Q1(EqualityCheckProblem):
+class Q1(UzCheckProblem):
     """v vektorini a yo'nalishiga proyeksiyalang."""
     _hints = [
         "proj_a(v) = (v·a / a·a) * a formulasidan foydalaning.",
@@ -18,7 +18,7 @@ class Q1(EqualityCheckProblem):
         return True
 
 
-class Q2(EqualityCheckProblem):
+class Q2(UzCheckProblem):
     """Proyeksiya matritsasini hisoblang: P = a aᵀ / (aᵀa)."""
     _hints = [
         "P = np.outer(a, a) / np.dot(a, a)",
@@ -33,7 +33,7 @@ class Q2(EqualityCheckProblem):
         return True
 
 
-class Q3(EqualityCheckProblem):
+class Q3(UzCheckProblem):
     """P² = P (idempotentlik) ni tekshiring."""
     _hints = [
         "Proyeksiya matritsasi P uchun P @ P == P bo'lishi kerak.",
@@ -48,7 +48,7 @@ class Q3(EqualityCheckProblem):
         return True
 
 
-class Q4(EqualityCheckProblem):
+class Q4(UzCheckProblem):
     """b vektorini A ustun fazosiga proyeksiyalang: p = A(AᵀA)⁻¹Aᵀb."""
     _hints = [
         "p = A @ np.linalg.inv(A.T @ A) @ A.T @ b",
@@ -64,7 +64,7 @@ class Q4(EqualityCheckProblem):
         return True
 
 
-class Q5(EqualityCheckProblem):
+class Q5(UzCheckProblem):
     """Qoldiqni (error e = b - p) hisoblang va p ga perpendikulyar ekanini tekshiring."""
     _hints = [
         "e = b - p, keyin np.dot(e, p) ≈ 0 bo'lishi kerak.",
@@ -81,7 +81,7 @@ class Q5(EqualityCheckProblem):
         return True
 
 
-class Q6(EqualityCheckProblem):
+class Q6(UzCheckProblem):
     """To'liq proyeksiya matritsasini hisoblang: P = A(AᵀA)⁻¹Aᵀ."""
     _hints = [
         "P = A @ np.linalg.inv(A.T @ A) @ A.T",
@@ -101,7 +101,7 @@ class Q6(EqualityCheckProblem):
         return True
 
 
-class C1_Q1(EqualityCheckProblem):
+class C1_Q1(UzCheckProblem):
     """Uch nuqta orqali eng yaxshi to'g'ri chiziqni toping (least squares)."""
     _hints = [
         "y = c + dx shaklida: A = [[1,x1],[1,x2],[1,x3]], b = [y1,y2,y3].",

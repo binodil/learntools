@@ -1,6 +1,6 @@
 """Hints and solutions — Dars 14.2: CNN (Convolutional Neural Networks)."""
 import numpy as np
-from learntools.core import EqualityCheckProblem, ThoughtExperiment
+from learntools.linear_algebra_uz.base import UzCheckProblem, ThoughtExperiment
 
 
 def _conv_matrix(w, n):
@@ -14,7 +14,7 @@ def _conv_matrix(w, n):
     return K
 
 
-class Q1(EqualityCheckProblem):
+class Q1(UzCheckProblem):
     """Valid 1D korrelyatsiya: y_i = sum_k w_k x_{i+k}."""
     _hints = [
         "Har bir chiqish: filtrni signal bo'lagiga skalyar ko'paytirish.",
@@ -30,7 +30,7 @@ class Q1(EqualityCheckProblem):
         return True
 
 
-class Q2(EqualityCheckProblem):
+class Q2(UzCheckProblem):
     """O'rtacha (smoothing) filtri natijasi."""
     _hints = [
         "Filtr w = [1/3, 1/3, 1/3].",
@@ -47,7 +47,7 @@ class Q2(EqualityCheckProblem):
         return True
 
 
-class Q3(EqualityCheckProblem):
+class Q3(UzCheckProblem):
     """Konvolyutsiyani matritsa ko'paytmasi sifatida: y = K x."""
     _hints = [
         "K — Toeplitz matritsa (diagonallarda filtr koeffitsiyentlari).",
@@ -62,7 +62,7 @@ class Q3(EqualityCheckProblem):
         return True
 
 
-class Q4(EqualityCheckProblem):
+class Q4(UzCheckProblem):
     """Ikkinchi hosila filtri [1,-2,1] ni qo'llang."""
     _hints = [
         "Bu filtr signal egriligini o'lchaydi.",
@@ -78,7 +78,7 @@ class Q4(EqualityCheckProblem):
         return True
 
 
-class Q5(EqualityCheckProblem):
+class Q5(UzCheckProblem):
     """Tsirkulyant matritsaning xususiy qiymatlari = FFT(birinchi ustun)."""
     _hints = [
         "Tsirkulyant matritsa Furye bazisida diagonallashadi.",
@@ -93,7 +93,7 @@ class Q5(EqualityCheckProblem):
         return True
 
 
-class Q6(EqualityCheckProblem):
+class Q6(UzCheckProblem):
     """CNN qatlamidagi parametrlar soni (weight sharing)."""
     _hints = [
         "Filtr o'lchami k bo'lsa, parametrlar soni = k (signal uzunligidan mustaqil).",
@@ -108,7 +108,7 @@ class Q6(EqualityCheckProblem):
 
 
 # Challenge 1
-class C1_Q1(EqualityCheckProblem):
+class C1_Q1(UzCheckProblem):
     """1D konvolyutsiyani Toeplitz matritsa qurib hisoblang."""
     _hints = [
         "K[i,j] = w[j-i+k] (chegarada), aks holda 0; k = len(w)//2.",

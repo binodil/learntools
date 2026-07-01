@@ -1,9 +1,9 @@
 """Hints and solutions — Dars 6.3: Differentsial Tenglamalar Sistemasi."""
 import numpy as np
-from learntools.core import EqualityCheckProblem, ThoughtExperiment
+from learntools.linear_algebra_uz.base import UzCheckProblem, ThoughtExperiment
 
 
-class Q1(EqualityCheckProblem):
+class Q1(UzCheckProblem):
     """du/dt = Au ning yechimi u(t) = e^{λt}x."""
     _hints = [
         "A ning xususiy qiymatlari λ va xususiy vektorlari x uchun u(t) = e^{λt}x yechimdir.",
@@ -19,7 +19,7 @@ class Q1(EqualityCheckProblem):
         return True
 
 
-class Q2(EqualityCheckProblem):
+class Q2(UzCheckProblem):
     """Matritsa eksponentsiali e^{At} ni hisoblang (scipy)."""
     _hints = [
         "scipy.linalg.expm(A * t) — matritsa eksponentsiasini beradi.",
@@ -35,7 +35,7 @@ class Q2(EqualityCheckProblem):
         return True
 
 
-class Q3(EqualityCheckProblem):
+class Q3(UzCheckProblem):
     """u(t) = e^{At} u(0) — boshlang'ich shart bilan yechim."""
     _hints = [
         "u(t) = expm(A*t) @ u0, bu erda u0 = u(0) boshlang'ich shart.",
@@ -50,7 +50,7 @@ class Q3(EqualityCheckProblem):
         return True
 
 
-class Q4(EqualityCheckProblem):
+class Q4(UzCheckProblem):
     """Barqarorlik: barcha λ < 0 bo'lsa u(t)→0."""
     _hints = [
         "Barcha xususiy qiymatlarning haqiqiy qismi manfiy bo'lsa — barqaror.",
@@ -66,7 +66,7 @@ class Q4(EqualityCheckProblem):
         return True
 
 
-class Q5(EqualityCheckProblem):
+class Q5(UzCheckProblem):
     """2x2 tizimni Fibonacci-ga o'xshash iteratsiya bilan yeching."""
     _hints = [
         "Fibonacci: F_{n+1} = F_n + F_{n-1} → [[F_{n+1}],[F_n]] = A^n [[1],[0]]",
@@ -82,7 +82,7 @@ class Q5(EqualityCheckProblem):
         return True
 
 
-class Q6(EqualityCheckProblem):
+class Q6(UzCheckProblem):
     """2-tartibli ODE ni 1-tartibli sistemaga keltiring."""
     _hints = [
         "y'' + py' + qy = 0 → u = [y, y']^T, du/dt = [[0,1],[-q,-p]] u.",
@@ -97,7 +97,7 @@ class Q6(EqualityCheckProblem):
         return True
 
 
-class C1_Q1(EqualityCheckProblem):
+class C1_Q1(UzCheckProblem):
     """Diagonallashtirish orqali e^{At} = S e^{Λt} S⁻¹ ni hisoblang."""
     _hints = [
         "vals, S = np.linalg.eig(A). Keyin Λt = diag(vals*t), e^{At} = S @ diag(exp(vals*t)) @ inv(S).",

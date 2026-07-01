@@ -1,9 +1,9 @@
 """Hints and solutions — Dars 10.6: Kompyuter Grafika."""
 import numpy as np
-from learntools.core import EqualityCheckProblem, ThoughtExperiment
+from learntools.linear_algebra_uz.base import UzCheckProblem, ThoughtExperiment
 
 
-class Q1(EqualityCheckProblem):
+class Q1(UzCheckProblem):
     """2D aylantirish matritsasi bilan nuqtalar to'plamini aylantiring."""
     _hints = [
         "R = [[cos θ, -sin θ], [sin θ, cos θ]]. P_new = R @ P.",
@@ -20,7 +20,7 @@ class Q1(EqualityCheckProblem):
         return True
 
 
-class Q2(EqualityCheckProblem):
+class Q2(UzCheckProblem):
     """2D masshtablash matritsasi bilan kengaytiring."""
     _hints = ["S = diag(sx, sy). P_scaled = S @ P."]
     _solution = "S = np.diag([sx, sy]); P_scaled = S @ P"
@@ -33,7 +33,7 @@ class Q2(EqualityCheckProblem):
         return True
 
 
-class Q3(EqualityCheckProblem):
+class Q3(UzCheckProblem):
     """Gomogen koordinatalarda ko'chirish (translation) matritsasi."""
     _hints = [
         "Gomogen: [x, y, 1]. T = [[1,0,tx],[0,1,ty],[0,0,1]]. P_hom = T @ [x,y,1].",
@@ -53,7 +53,7 @@ class Q3(EqualityCheckProblem):
         return True
 
 
-class Q4(EqualityCheckProblem):
+class Q4(UzCheckProblem):
     """Uch transformatsiyani birlashtirib umumiy matritsani toping."""
     _hints = [
         "Kompozitsiya: M = T @ R @ S (avval masshtab, keyin aylantir, keyin ko'chir).",
@@ -67,7 +67,7 @@ class Q4(EqualityCheckProblem):
         return True
 
 
-class Q5(EqualityCheckProblem):
+class Q5(UzCheckProblem):
     """3D proyeksiya (perspective): P_proj = P @ M_proj."""
     _hints = [
         "Oddiy perspektiv proyeksiya: x' = x/z, y' = y/z.",
@@ -85,7 +85,7 @@ class Q5(EqualityCheckProblem):
         return True
 
 
-class Q6(EqualityCheckProblem):
+class Q6(UzCheckProblem):
     """SVD bilan rasm siqish va qayta tiklash."""
     _hints = [
         "U, s, Vt = svd(img). A_k = U[:,:k] @ diag(s[:k]) @ Vt[:k,:] — k-rang taqrib.",
@@ -103,7 +103,7 @@ class Q6(EqualityCheckProblem):
         return True
 
 
-class C1_Q1(EqualityCheckProblem):
+class C1_Q1(UzCheckProblem):
     """B-spline egri chiziq uchun kontrol nuqtalardan koeffitsiyentlarni hisoblang."""
     _hints = [
         "B-spline: P(t) = sum B_{i,k}(t) P_i. Matrits ko'rinish: C = B_mat @ control_pts.",

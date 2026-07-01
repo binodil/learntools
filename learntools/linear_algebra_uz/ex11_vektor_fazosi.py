@@ -1,9 +1,9 @@
 """Hints and solutions — Dars 3.1: Vektor Fazosi."""
 import numpy as np
-from learntools.core import EqualityCheckProblem, ThoughtExperiment
+from learntools.linear_algebra_uz.base import UzCheckProblem, ThoughtExperiment
 
 
-class Q1(EqualityCheckProblem):
+class Q1(UzCheckProblem):
     """Kichik fazo tekshiruvi: nol vektor bormi?"""
     _hints = [
         "Har bir kichik fazo nol vektorni o'z ichiga olishi shart.",
@@ -17,7 +17,7 @@ class Q1(EqualityCheckProblem):
         return True
 
 
-class Q2(EqualityCheckProblem):
+class Q2(UzCheckProblem):
     """Yopiqlikni tekshirish: ikki vektor yig'indisi."""
     _hints = [
         "Kichik fazo qo'shishga yopiq: u, v fazoda bo'lsa, u+v ham fazoda.",
@@ -32,7 +32,7 @@ class Q2(EqualityCheckProblem):
         return True
 
 
-class Q3(EqualityCheckProblem):
+class Q3(UzCheckProblem):
     """Ustun fazosining rangi."""
     _hints = [
         "C(A) o'lchami = rank(A).",
@@ -47,7 +47,7 @@ class Q3(EqualityCheckProblem):
         return True
 
 
-class Q4(EqualityCheckProblem):
+class Q4(UzCheckProblem):
     """b vektor C(A) da yotadimi?"""
     _hints = [
         "b in C(A) <=> Ax=b yechimga ega <=> rank(A) == rank([A|b]).",
@@ -62,7 +62,7 @@ class Q4(EqualityCheckProblem):
         return True
 
 
-class Q5(EqualityCheckProblem):
+class Q5(UzCheckProblem):
     """Ustun fazosi bazasini skalyar ko'paytmaga yopiqligi."""
     _hints = [
         "Kichik fazo skalyar ko'paytirishga yopiq: c*v ham fazoda.",
@@ -77,7 +77,7 @@ class Q5(EqualityCheckProblem):
         return True
 
 
-class Q6(EqualityCheckProblem):
+class Q6(UzCheckProblem):
     """Harder: kichik fazo o'lchamini topish (matritsalar fazosi)."""
     _hints = [
         "2x2 simmetrik matritsalar fazosi: A = A^T sharti.",
@@ -92,7 +92,7 @@ class Q6(EqualityCheckProblem):
 
 
 # Challenge 1
-class C1_Q1(EqualityCheckProblem):
+class C1_Q1(UzCheckProblem):
     """Berilgan to'plam kichik fazomi? Uchta shartni tekshiring."""
     _hints = [
         "Uch shart: 0 bor; qo'shishga yopiq; ko'paytirishga yopiq.",

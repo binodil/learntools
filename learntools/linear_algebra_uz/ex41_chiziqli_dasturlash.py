@@ -1,9 +1,9 @@
 """Hints and solutions — Dars 10.4: Chiziqli Dasturlash."""
 import numpy as np
-from learntools.core import EqualityCheckProblem, ThoughtExperiment
+from learntools.linear_algebra_uz.base import UzCheckProblem, ThoughtExperiment
 
 
-class Q1(EqualityCheckProblem):
+class Q1(UzCheckProblem):
     """LP standart shaklga keltiring: min cᵀx, Ax=b, x≥0."""
     _hints = [
         "max cᵀx → min -cᵀx. Tengsizlik Ax≤b → Ax+s=b, s≥0 (slack o'zgaruvchi).",
@@ -16,7 +16,7 @@ class Q1(EqualityCheckProblem):
         return True
 
 
-class Q2(EqualityCheckProblem):
+class Q2(UzCheckProblem):
     """scipy.optimize.linprog bilan LP yeching."""
     _hints = [
         "from scipy.optimize import linprog; res = linprog(c, A_ub=A, b_ub=b, bounds=bounds).",
@@ -35,7 +35,7 @@ class Q2(EqualityCheckProblem):
         return True
 
 
-class Q3(EqualityCheckProblem):
+class Q3(UzCheckProblem):
     """Ikkita o'zgaruvchili LP ni grafik usulda yeching."""
     _hints = [
         "Burchak nuqtalarini toping: chiziqlar kesishishi va o'q bilan kesishish.",
@@ -57,7 +57,7 @@ class Q3(EqualityCheckProblem):
         return True
 
 
-class Q4(EqualityCheckProblem):
+class Q4(UzCheckProblem):
     """Transport masalasi (minimal narx bilan yuk tashish)."""
     _hints = [
         "Transport masalasi: manba s, maqsad d, narx C. linprog bilan yechish.",
@@ -93,7 +93,7 @@ class Q4(EqualityCheckProblem):
         return True
 
 
-class Q5(EqualityCheckProblem):
+class Q5(UzCheckProblem):
     """LP dual masalasini yozing."""
     _hints = [
         "Primal: min cᵀx, Ax≥b, x≥0. Dual: max bᵀy, Aᵀy≤c, y≥0.",
@@ -109,7 +109,7 @@ class Q5(EqualityCheckProblem):
         return True
 
 
-class Q6(EqualityCheckProblem):
+class Q6(UzCheckProblem):
     """Kuchli duallik teoremasi: primal = dual optimal qiymat."""
     _hints = [
         "Kuchli duallik: agar primal va dual feasible bo'lsa, optimal qiymatlar teng.",
@@ -131,7 +131,7 @@ class Q6(EqualityCheckProblem):
         return True
 
 
-class C1_Q1(EqualityCheckProblem):
+class C1_Q1(UzCheckProblem):
     """Dieta masalasi: minimal xarajat bilan ozuqaviy talablarni qondiring."""
     _hints = [
         "min cᵀx (narxlar) s.t. Ax >= b (ozuqa talablari), x >= 0.",

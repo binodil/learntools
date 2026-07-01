@@ -1,9 +1,9 @@
 """Hints and solutions — Dars 13.2: Lagranj Ko'paytuvchilari."""
 import numpy as np
-from learntools.core import EqualityCheckProblem, ThoughtExperiment
+from learntools.linear_algebra_uz.base import UzCheckProblem, ThoughtExperiment
 
 
-class Q1(EqualityCheckProblem):
+class Q1(UzCheckProblem):
     """Lagranj funksiyasi: L(x,lambda) = f(x) + lambda * g(x)."""
     _hints = ["L = f(x) + lambda_val * g(x). Grad L = grad f + lambda * grad g = 0."]
     _solution = "L = f_val + lambda_val * g_val"
@@ -15,7 +15,7 @@ class Q1(EqualityCheckProblem):
         return True
 
 
-class Q2(EqualityCheckProblem):
+class Q2(UzCheckProblem):
     """KKT shartlari: cheklov g(x*) = 0 va grad f + lambda*grad g = 0."""
     _hints = [
         "KKT: g(x*) = 0, grad_f + lambda*grad_g = 0.",
@@ -39,7 +39,7 @@ class Q2(EqualityCheckProblem):
         return True
 
 
-class Q3(EqualityCheckProblem):
+class Q3(UzCheckProblem):
     """||x||² minimizatsiya s.t. aᵀx = b (minimal norma yechim)."""
     _hints = [
         "x* = a * b / (aᵀa). Lagranj: L = xᵀx + lambda*(aᵀx - b). grad = 2x + lambda*a = 0.",
@@ -55,7 +55,7 @@ class Q3(EqualityCheckProblem):
         return True
 
 
-class Q4(EqualityCheckProblem):
+class Q4(UzCheckProblem):
     """SVM hard margin: margin maksimizatsiya = ||w||² minimizatsiya."""
     _hints = [
         "SVM: min ||w||²/2 s.t. y_i(wᵀx_i + b) >= 1. Ekvivalent: wᵀw/2.",
@@ -78,7 +78,7 @@ class Q4(EqualityCheckProblem):
         return True
 
 
-class Q5(EqualityCheckProblem):
+class Q5(UzCheckProblem):
     """Rayleigh kotirovkasi optimizatsiyasi: max xᵀAx / xᵀx s.t. ||x||=1."""
     _hints = [
         "xᵀAx/xᵀx maksimumi = lambda_max. Lagranj shartida xᵀx=1 → Ax = lambda*x.",
@@ -95,7 +95,7 @@ class Q5(EqualityCheckProblem):
         return True
 
 
-class Q6(EqualityCheckProblem):
+class Q6(UzCheckProblem):
     """Umumlashtirilgan xususiy qiymat: Ax = lambda*Bx (generalized eigenvalue)."""
     _hints = [
         "scipy.linalg.eigh(A, B) — umumlashtirilgan xususiy qiymat masalasi.",
@@ -110,7 +110,7 @@ class Q6(EqualityCheckProblem):
         return True
 
 
-class C1_Q1(EqualityCheckProblem):
+class C1_Q1(UzCheckProblem):
     """Portfolio optimizatsiya: min wᵀΣw s.t. rᵀw=mu_target, 1ᵀw=1."""
     _hints = [
         "Lagranj: L = wᵀΣw + lambda1*(rᵀw-mu) + lambda2*(1ᵀw-1). KKT → chiziqli sistema.",

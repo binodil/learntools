@@ -1,9 +1,9 @@
 """Hints and solutions — Dars 13.1: Minimum Masalalari: Konvekslik va Newton Usuli."""
 import numpy as np
-from learntools.core import EqualityCheckProblem, ThoughtExperiment
+from learntools.linear_algebra_uz.base import UzCheckProblem, ThoughtExperiment
 
 
-class Q1(EqualityCheckProblem):
+class Q1(UzCheckProblem):
     """f(x) = xᵀAx + bᵀx konveks ekanini tekshiring: A musbat yarim aniq bo'lsa."""
     _hints = ["A konveks uchun PSD bo'lishi kerak: barcha xususiy qiymatlar >= 0."]
     _solution = "is_convex = np.all(np.linalg.eigvalsh(A) >= -1e-10)"
@@ -15,7 +15,7 @@ class Q1(EqualityCheckProblem):
         return True
 
 
-class Q2(EqualityCheckProblem):
+class Q2(UzCheckProblem):
     """f(x) = xᵀAx + bᵀx minimumini toping: grad f = 2Ax + b = 0."""
     _hints = ["Grad f = 2Ax + b = 0 → x* = -0.5 A^{-1} b."]
     _solution = "x_star = -0.5 * np.linalg.solve(A, b)"
@@ -30,7 +30,7 @@ class Q2(EqualityCheckProblem):
         return True
 
 
-class Q3(EqualityCheckProblem):
+class Q3(UzCheckProblem):
     """Hessian matritsasini hisoblang: H = ∂²f/∂x²."""
     _hints = ["f(x) = xᵀAx → H = 2A. f(x) = sum(xi^4) → H = diag(12*x^2)."]
     _solution = "H = 2 * A  # kvadratik funksiya uchun"
@@ -42,7 +42,7 @@ class Q3(EqualityCheckProblem):
         return True
 
 
-class Q4(EqualityCheckProblem):
+class Q4(UzCheckProblem):
     """Newton qadam: x_{k+1} = x_k - H^{-1} grad f."""
     _hints = ["p = np.linalg.solve(H, -grad). x_new = x + p (Newton qadam)."]
     _solution = "p = np.linalg.solve(H, -grad); x_new = x + p"
@@ -55,7 +55,7 @@ class Q4(EqualityCheckProblem):
         return True
 
 
-class Q5(EqualityCheckProblem):
+class Q5(UzCheckProblem):
     """Newton usuli bilan kvadratik funksiyaning minimumini toping (1 qadamda)."""
     _hints = [
         "f(x) = xᵀAx + bᵀx uchun Newton 1 qadamda yetadi: x* = -A^{-1}b/2.",
@@ -74,7 +74,7 @@ class Q5(EqualityCheckProblem):
         return True
 
 
-class Q6(EqualityCheckProblem):
+class Q6(UzCheckProblem):
     """Ikkinchi darajali optimizatsiya: f(x) = (x-3)^4 uchun Newton iteratsiyalari."""
     _hints = [
         "f'(x) = 4(x-3)^3, f''(x) = 12(x-3)^2. x_new = x - f'/f''.",
@@ -94,7 +94,7 @@ class Q6(EqualityCheckProblem):
         return True
 
 
-class C1_Q1(EqualityCheckProblem):
+class C1_Q1(UzCheckProblem):
     """Logistik regressiya Hessian musbat yarim aniq ekanini tekshiring."""
     _hints = [
         "Logistik regressiya H = XᵀDX, D = diag(p*(1-p)). Bu PSD.",

@@ -1,9 +1,9 @@
 """Hints and solutions — Dars 3.2: Nol Fazo (Nullspace)."""
 import numpy as np
-from learntools.core import EqualityCheckProblem, ThoughtExperiment
+from learntools.linear_algebra_uz.base import UzCheckProblem, ThoughtExperiment
 
 
-class Q1(EqualityCheckProblem):
+class Q1(UzCheckProblem):
     """Nol fazo o'lchamini topish: dim N(A) = n - r."""
     _hints = [
         "dim N(A) = ustunlar soni - rank.",
@@ -18,7 +18,7 @@ class Q1(EqualityCheckProblem):
         return True
 
 
-class Q2(EqualityCheckProblem):
+class Q2(UzCheckProblem):
     """Vektor nol fazoda yotadimi? Ax=0 tekshiruvi."""
     _hints = [
         "x in N(A) <=> A @ x = 0.",
@@ -33,7 +33,7 @@ class Q2(EqualityCheckProblem):
         return True
 
 
-class Q3(EqualityCheckProblem):
+class Q3(UzCheckProblem):
     """Maxsus yechimni tekshirish."""
     _hints = [
         "Maxsus yechim A @ s = 0 ni qanoatlantirishi kerak.",
@@ -48,7 +48,7 @@ class Q3(EqualityCheckProblem):
         return True
 
 
-class Q4(EqualityCheckProblem):
+class Q4(UzCheckProblem):
     """Pivot va erkin o'zgaruvchilar soni."""
     _hints = [
         "Pivot ustunlar soni = rank. Erkin = n - rank.",
@@ -64,7 +64,7 @@ class Q4(EqualityCheckProblem):
         return True
 
 
-class Q5(EqualityCheckProblem):
+class Q5(UzCheckProblem):
     """Faqat nol yechim bormi? N(A)={0} <=> rank = n."""
     _hints = [
         "N(A) = {0} faqat ustunlar mustaqil bo'lganda, ya'ni rank = n.",
@@ -79,7 +79,7 @@ class Q5(EqualityCheckProblem):
         return True
 
 
-class Q6(EqualityCheckProblem):
+class Q6(UzCheckProblem):
     """Harder: maxsus yechimni qo'lda yasash."""
     _hints = [
         "R = [[1,0,2,0],[0,1,0,2]]. Erkin: x3, x4.",
@@ -97,7 +97,7 @@ class Q6(EqualityCheckProblem):
 
 
 # Challenge 1
-class C1_Q1(EqualityCheckProblem):
+class C1_Q1(UzCheckProblem):
     """Nol fazo bazasini tuzish va o'lchamni tekshirish."""
     _hints = [
         "scipy.linalg.null_space(A) nol fazo bazasini beradi.",

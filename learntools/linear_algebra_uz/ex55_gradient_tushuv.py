@@ -1,9 +1,9 @@
 """Hints and solutions — Dars 13.4: Gradient Tushuv."""
 import numpy as np
-from learntools.core import EqualityCheckProblem, ThoughtExperiment
+from learntools.linear_algebra_uz.base import UzCheckProblem, ThoughtExperiment
 
 
-class Q1(EqualityCheckProblem):
+class Q1(UzCheckProblem):
     """Gradientni hisoblang: f(x) = xᵀAx + bᵀx → grad = 2Ax + b."""
     _hints = ["f(x) = xᵀAx + bᵀx → grad = 2Ax + b."]
     _solution = "grad = 2 * A @ x + b"
@@ -15,7 +15,7 @@ class Q1(EqualityCheckProblem):
         return True
 
 
-class Q2(EqualityCheckProblem):
+class Q2(UzCheckProblem):
     """Bir qadam gradient tushuv: x_new = x - lr * grad."""
     _hints = ["x_new = x - learning_rate * gradient."]
     _solution = "x_new = x - lr * grad"
@@ -27,7 +27,7 @@ class Q2(EqualityCheckProblem):
         return True
 
 
-class Q3(EqualityCheckProblem):
+class Q3(UzCheckProblem):
     """Gradient tushuv orqali f(x) = xᵀAx + bᵀx minimumini toping."""
     _hints = [
         "Iteratsiya: x = x - lr * (2*A@x + b). lr kichik bo'lsin.",
@@ -49,7 +49,7 @@ class Q3(EqualityCheckProblem):
         return True
 
 
-class Q4(EqualityCheckProblem):
+class Q4(UzCheckProblem):
     """Momentum bilan gradient tushuv: v = beta*v + grad; x = x - lr*v."""
     _hints = [
         "Heavy ball: v = beta*v + grad_f(x); x = x - lr*v.",
@@ -68,7 +68,7 @@ class Q4(EqualityCheckProblem):
         return True
 
 
-class Q5(EqualityCheckProblem):
+class Q5(UzCheckProblem):
     """Adaptiv o'rganish tezligi: Adagrad — grad^2 yig'indisi bo'yicha normallashtirish."""
     _hints = [
         "Adagrad: G += grad^2; x = x - lr/sqrt(G+eps) * grad.",
@@ -87,7 +87,7 @@ class Q5(EqualityCheckProblem):
         return True
 
 
-class Q6(EqualityCheckProblem):
+class Q6(UzCheckProblem):
     """O'rganish tezligini tanlash: konditsion son ta'siri."""
     _hints = [
         "Optimal lr = 2/(lambda_min + lambda_max). Katta konditsion son → sekin konvergentsiya.",
@@ -108,7 +108,7 @@ class Q6(EqualityCheckProblem):
         return True
 
 
-class C1_Q1(EqualityCheckProblem):
+class C1_Q1(UzCheckProblem):
     """Chiziqli regressiya uchun gradient tushuv: grad L = (2/n) Xᵀ(Xw-y)."""
     _hints = [
         "L = ||Xw-y||² / n. grad = 2*X.T@(X@w - y) / n.",

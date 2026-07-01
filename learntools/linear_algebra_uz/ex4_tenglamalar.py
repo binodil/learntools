@@ -1,9 +1,9 @@
 """Hints and solutions — Dars 2.1: Vektorlar va Chiziqli Tenglamalar."""
 import numpy as np
-from learntools.core import EqualityCheckProblem, ThoughtExperiment
+from learntools.linear_algebra_uz.base import UzCheckProblem, ThoughtExperiment
 
 
-class Q1(EqualityCheckProblem):
+class Q1(UzCheckProblem):
     """Chiziqli tenglamalar sistemasini matritsali ko'rinishga o'tkazing."""
     _hints = [
         "Ax = b ko'rinishida yozing. A — koeffitsiyentlar matritsasi, x — noma'lumlar, b — o'ng tomon.",
@@ -22,7 +22,7 @@ class Q1(EqualityCheckProblem):
         return True
 
 
-class Q2(EqualityCheckProblem):
+class Q2(UzCheckProblem):
     """np.linalg.solve bilan sistemani yeching."""
     _hints = [
         "np.linalg.solve(A, b) Ax=b sistemasini yechadi.",
@@ -50,7 +50,7 @@ class Q3(ThoughtExperiment):
     )
 
 
-class Q4(EqualityCheckProblem):
+class Q4(UzCheckProblem):
     """3 ta tenglama, 3 ta noma'lum."""
     _hints = [
         "np.linalg.solve(A, b) 3x3 uchun ham ishlaydi.",
@@ -69,7 +69,7 @@ class Q4(EqualityCheckProblem):
 
 
 # Challenge 1
-class C1_Q1(EqualityCheckProblem):
+class C1_Q1(UzCheckProblem):
     """Nechta yechim bor? (determinant)"""
     _hints = [
         "det(A) = 0 → yechim yo'q yoki cheksiz ko'p.",

@@ -1,9 +1,9 @@
 """Hints and solutions — Dars 7.2: SVD da Bazalar va Matritsalar."""
 import numpy as np
-from learntools.core import EqualityCheckProblem, ThoughtExperiment
+from learntools.linear_algebra_uz.base import UzCheckProblem, ThoughtExperiment
 
 
-class Q1(EqualityCheckProblem):
+class Q1(UzCheckProblem):
     """A v_k = sigma_k u_k tekshiring."""
     _hints = [
         "U, s, Vt = np.linalg.svd(A). v_k = Vt[k], u_k = U[:,k].",
@@ -17,7 +17,7 @@ class Q1(EqualityCheckProblem):
         return True
 
 
-class Q2(EqualityCheckProblem):
+class Q2(UzCheckProblem):
     """A^T A ning xususiy qiymatlari = sigma^2."""
     _hints = [
         "np.linalg.eigvalsh(A.T @ A) xususiy qiymatlarni beradi.",
@@ -31,7 +31,7 @@ class Q2(EqualityCheckProblem):
         return True
 
 
-class Q3(EqualityCheckProblem):
+class Q3(UzCheckProblem):
     """U ortogonalligini tekshiring."""
     _hints = [
         "U^T U birlik matritsaga teng bo'lishi kerak.",
@@ -46,7 +46,7 @@ class Q3(EqualityCheckProblem):
         return True
 
 
-class Q4(EqualityCheckProblem):
+class Q4(UzCheckProblem):
     """Singulyar qiymat = sqrt(xususiy qiymat)."""
     _hints = [
         "sigma_k = sqrt(lambda_k), lambda_k = A^T A xususiy qiymati.",
@@ -61,7 +61,7 @@ class Q4(EqualityCheckProblem):
         return True
 
 
-class Q5(EqualityCheckProblem):
+class Q5(UzCheckProblem):
     """Rekonstruksiya: U @ diag(s) @ Vt = A."""
     _hints = [
         "A = U @ np.diag(s) @ Vt (full_matrices=False bilan).",
@@ -75,7 +75,7 @@ class Q5(EqualityCheckProblem):
         return True
 
 
-class Q6(EqualityCheckProblem):
+class Q6(UzCheckProblem):
     """Simmetrik musbat aniq A uchun sigma = lambda."""
     _hints = [
         "Musbat aniq simmetrik matritsa uchun singulyar qiymatlar = xususiy qiymatlar.",
@@ -90,7 +90,7 @@ class Q6(EqualityCheckProblem):
 
 
 # Challenge 1
-class C1_Q1(EqualityCheckProblem):
+class C1_Q1(UzCheckProblem):
     """v_k -> u_k aylanishini U ustun fazosida tekshiring."""
     _hints = [
         "Chap singulyar vektorlar u_k C(A) ustun fazosi bazasi.",

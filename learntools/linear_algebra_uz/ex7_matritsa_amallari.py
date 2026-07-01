@@ -1,9 +1,9 @@
 """Hints and solutions — Dars 2.4: Matritsa Amallari."""
 import numpy as np
-from learntools.core import EqualityCheckProblem, ThoughtExperiment
+from learntools.linear_algebra_uz.base import UzCheckProblem, ThoughtExperiment
 
 
-class Q1(EqualityCheckProblem):
+class Q1(UzCheckProblem):
     """Matritsa qo'shish."""
     _hints = ["A + B — mos elementlarni qo'shing. O'lchamlar teng bo'lishi kerak."]
     _solution = "C = A + B"
@@ -14,7 +14,7 @@ class Q1(EqualityCheckProblem):
         return True
 
 
-class Q2(EqualityCheckProblem):
+class Q2(UzCheckProblem):
     """Kommutativlik: AB ≠ BA."""
     _hints = [
         "Matritsa ko'paytmasi odatda kommutativ emas: AB ≠ BA.",
@@ -34,7 +34,7 @@ class Q2(EqualityCheckProblem):
         return True
 
 
-class Q3(EqualityCheckProblem):
+class Q3(UzCheckProblem):
     """Assotsiativlik: (AB)C = A(BC)."""
     _hints = [
         "Matritsa ko'paytmasi assotsiativ: (AB)C = A(BC).",
@@ -52,7 +52,7 @@ class Q3(EqualityCheckProblem):
         return True
 
 
-class Q4(EqualityCheckProblem):
+class Q4(UzCheckProblem):
     """(AB)^T = B^T A^T."""
     _hints = [
         "(AB)^T = B^T A^T — transpoze qoidasi.",
@@ -67,7 +67,7 @@ class Q4(EqualityCheckProblem):
         return True
 
 
-class Q5(EqualityCheckProblem):
+class Q5(UzCheckProblem):
     """Matritsa kuchi."""
     _hints = ["np.linalg.matrix_power(A, n) — A^n ni hisoblaydi."]
     _solution = "A4 = np.linalg.matrix_power(A, 4)"
@@ -80,7 +80,7 @@ class Q5(EqualityCheckProblem):
 
 
 # Challenge 1
-class C1_Q1(EqualityCheckProblem):
+class C1_Q1(UzCheckProblem):
     """Blok matritsa ko'paytmasi."""
     _hints = [
         "np.block([[A, B], [C, D]]) blok matritsani yaratadi.",

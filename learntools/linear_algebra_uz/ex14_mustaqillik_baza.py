@@ -1,9 +1,9 @@
 """Hints and solutions — Dars 3.4: Mustaqillik, Baza va O'lcham."""
 import numpy as np
-from learntools.core import EqualityCheckProblem, ThoughtExperiment
+from learntools.linear_algebra_uz.base import UzCheckProblem, ThoughtExperiment
 
 
-class Q1(EqualityCheckProblem):
+class Q1(UzCheckProblem):
     """Vektorlar chiziqli mustaqilmi? rank == ustunlar soni."""
     _hints = [
         "Ustunlar mustaqil <=> rank(A) == ustunlar soni.",
@@ -18,7 +18,7 @@ class Q1(EqualityCheckProblem):
         return True
 
 
-class Q2(EqualityCheckProblem):
+class Q2(UzCheckProblem):
     """Span o'lchami = rank."""
     _hints = [
         "Vektorlar spanining o'lchami = rank(A).",
@@ -33,7 +33,7 @@ class Q2(EqualityCheckProblem):
         return True
 
 
-class Q3(EqualityCheckProblem):
+class Q3(UzCheckProblem):
     """Vektorlar to'plami baza bo'la oladimi? (kvadrat, det!=0)."""
     _hints = [
         "n ta vektor R^n ning bazasi <=> ular mustaqil <=> det != 0.",
@@ -48,7 +48,7 @@ class Q3(EqualityCheckProblem):
         return True
 
 
-class Q4(EqualityCheckProblem):
+class Q4(UzCheckProblem):
     """Bog'liqlik munosabatini topish (nol fazo vektori)."""
     _hints = [
         "Bog'liq ustunlar uchun A x = 0 ning notrivial yechimi bor.",
@@ -62,7 +62,7 @@ class Q4(EqualityCheckProblem):
         return True
 
 
-class Q5(EqualityCheckProblem):
+class Q5(UzCheckProblem):
     """O'lcham: dim R^(m x n) = m*n."""
     _hints = [
         "Matritsalar fazosi R^(m x n) o'lchami = m * n.",
@@ -76,7 +76,7 @@ class Q5(EqualityCheckProblem):
         return True
 
 
-class Q6(EqualityCheckProblem):
+class Q6(UzCheckProblem):
     """Harder: ustun fazosi bazasini (pivot ustunlar) topish."""
     _hints = [
         "Baza = A ning mustaqil ustunlari (pivot ustunlar).",
@@ -92,7 +92,7 @@ class Q6(EqualityCheckProblem):
 
 
 # Challenge 1
-class C1_Q1(EqualityCheckProblem):
+class C1_Q1(UzCheckProblem):
     """n ta mustaqil vektor R^n ni yoyadimi?"""
     _hints = [
         "R^n da n ta mustaqil vektor avtomatik bazadir (yoyadi).",

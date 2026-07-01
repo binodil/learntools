@@ -1,9 +1,9 @@
 """Hints and solutions — Dars 14.3: RNN (Recurrent Neural Networks)."""
 import numpy as np
-from learntools.core import EqualityCheckProblem, ThoughtExperiment
+from learntools.linear_algebra_uz.base import UzCheckProblem, ThoughtExperiment
 
 
-class Q1(EqualityCheckProblem):
+class Q1(UzCheckProblem):
     """Bitta RNN qadami: h_t = tanh(Wh h + Wx x)."""
     _hints = [
         "h_yangi = tanh(Wh @ h + Wx @ x).",
@@ -18,7 +18,7 @@ class Q1(EqualityCheckProblem):
         return True
 
 
-class Q2(EqualityCheckProblem):
+class Q2(UzCheckProblem):
     """W_h ning spektral radiusi (max |lambda|)."""
     _hints = [
         "Spektral radius = max(|xususiy qiymatlar|).",
@@ -33,7 +33,7 @@ class Q2(EqualityCheckProblem):
         return True
 
 
-class Q3(EqualityCheckProblem):
+class Q3(UzCheckProblem):
     """Chiziqli holatning yoyilishi: h_2 = Wh(Wx x1) + Wx x2."""
     _hints = [
         "h_0 = 0, h_1 = Wx x1, h_2 = Wh h_1 + Wx x2.",
@@ -48,7 +48,7 @@ class Q3(EqualityCheckProblem):
         return True
 
 
-class Q4(EqualityCheckProblem):
+class Q4(UzCheckProblem):
     """W_h darajasi: W_h^t."""
     _hints = [
         "Matritsa darajasi: np.linalg.matrix_power(Wh, t).",
@@ -63,7 +63,7 @@ class Q4(EqualityCheckProblem):
         return True
 
 
-class Q5(EqualityCheckProblem):
+class Q5(UzCheckProblem):
     """Ortogonal matritsaning singulyar qiymatlari hammasi 1."""
     _hints = [
         "Ortogonal Q uchun Q^T Q = I.",
@@ -78,7 +78,7 @@ class Q5(EqualityCheckProblem):
         return True
 
 
-class Q6(EqualityCheckProblem):
+class Q6(UzCheckProblem):
     """Spektral radiusni belgilangan qiymatga masshtablash."""
     _hints = [
         "rho(c*A) = c*rho(A).",
@@ -94,7 +94,7 @@ class Q6(EqualityCheckProblem):
 
 
 # Challenge 1
-class C1_Q1(EqualityCheckProblem):
+class C1_Q1(UzCheckProblem):
     """To'liq RNN yurishini amalga oshiring va oxirgi holatni qaytaring."""
     _hints = [
         "h ni ketma-ket yangilang: h = tanh(Wh @ h + Wx @ x).",

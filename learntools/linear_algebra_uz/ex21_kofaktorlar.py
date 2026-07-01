@@ -1,6 +1,6 @@
 """Hints and solutions — Dars 5.2: Almashtirishlar va Kofaktorlar."""
 import numpy as np
-from learntools.core import EqualityCheckProblem, ThoughtExperiment
+from learntools.linear_algebra_uz.base import UzCheckProblem, ThoughtExperiment
 
 
 def _cofactor(A, i, j):
@@ -8,7 +8,7 @@ def _cofactor(A, i, j):
     return (-1) ** (i + j) * np.linalg.det(minor)
 
 
-class Q1(EqualityCheckProblem):
+class Q1(UzCheckProblem):
     """Minorni toping (1-satr, 1-ustun o'chirilgan)."""
     _hints = [
         "M_00 — 0-satr va 0-ustunni o'chirgach qolgan matritsa determinanti.",
@@ -23,7 +23,7 @@ class Q1(EqualityCheckProblem):
         return True
 
 
-class Q2(EqualityCheckProblem):
+class Q2(UzCheckProblem):
     """Kofaktor C_01 ni toping (ishora bilan)."""
     _hints = [
         "C_ij = (-1)^(i+j) * M_ij.",
@@ -38,7 +38,7 @@ class Q2(EqualityCheckProblem):
         return True
 
 
-class Q3(EqualityCheckProblem):
+class Q3(UzCheckProblem):
     """Birinchi satr bo'yicha yoyib determinant toping."""
     _hints = [
         "det = sum_j A[0,j] * C_0j.",
@@ -53,7 +53,7 @@ class Q3(EqualityCheckProblem):
         return True
 
 
-class Q4(EqualityCheckProblem):
+class Q4(UzCheckProblem):
     """n! — necha had bo'ladi (big formula)."""
     _hints = [
         "Leibniz formulasida n! ta had bor.",
@@ -67,7 +67,7 @@ class Q4(EqualityCheckProblem):
         return True
 
 
-class Q5(EqualityCheckProblem):
+class Q5(UzCheckProblem):
     """Ustun bo'yicha yoyish ham bir xil natija."""
     _hints = [
         "Istalgan ustun bo'yicha yoyish bir xil det beradi.",
@@ -82,7 +82,7 @@ class Q5(EqualityCheckProblem):
         return True
 
 
-class Q6(EqualityCheckProblem):
+class Q6(UzCheckProblem):
     """Eng ko'p nolli ustunni tanlash — samarali yoyish."""
     _hints = [
         "Nollari ko'p satr/ustun bo'yicha yoysangiz, hisob kamayadi.",
@@ -98,7 +98,7 @@ class Q6(EqualityCheckProblem):
         return True
 
 
-class C1_Q1(EqualityCheckProblem):
+class C1_Q1(UzCheckProblem):
     """To'liq kofaktor matritsasini quring."""
     _hints = [
         "C[i,j] = _cofactor(A,i,j) har bir i,j uchun.",

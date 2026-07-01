@@ -1,9 +1,9 @@
 """Hints and solutions — Dars 3.3: A x = b ning To'liq Yechimi."""
 import numpy as np
-from learntools.core import EqualityCheckProblem, ThoughtExperiment
+from learntools.linear_algebra_uz.base import UzCheckProblem, ThoughtExperiment
 
 
-class Q1(EqualityCheckProblem):
+class Q1(UzCheckProblem):
     """Xususiy yechimni tekshirish: A x_p = b."""
     _hints = [
         "Xususiy yechim A @ x_p = b ni qanoatlantirishi kerak.",
@@ -17,7 +17,7 @@ class Q1(EqualityCheckProblem):
         return True
 
 
-class Q2(EqualityCheckProblem):
+class Q2(UzCheckProblem):
     """To'liq yechim = x_p + x_n hali ham yechimmi?"""
     _hints = [
         "Agar A x_p = b va A x_n = 0 bo'lsa, A(x_p+x_n) = b.",
@@ -32,7 +32,7 @@ class Q2(EqualityCheckProblem):
         return True
 
 
-class Q3(EqualityCheckProblem):
+class Q3(UzCheckProblem):
     """Tizim moslashganmi? rank(A) == rank([A|b])."""
     _hints = [
         "Ax=b yechimga ega <=> rank(A) == rank([A|b]).",
@@ -47,7 +47,7 @@ class Q3(EqualityCheckProblem):
         return True
 
 
-class Q4(EqualityCheckProblem):
+class Q4(UzCheckProblem):
     """Yechimlar soni: 0, 1 yoki cheksiz."""
     _hints = [
         "Mos emas -> 0. Mos va r=n -> 1. Mos va r<n -> cheksiz.",
@@ -69,7 +69,7 @@ class Q4(EqualityCheckProblem):
         return True
 
 
-class Q5(EqualityCheckProblem):
+class Q5(UzCheckProblem):
     """lstsq bilan xususiy yechim topish."""
     _hints = [
         "np.linalg.lstsq(A, b, rcond=None)[0] eng kichik normali yechim beradi.",
@@ -83,7 +83,7 @@ class Q5(EqualityCheckProblem):
         return True
 
 
-class Q6(EqualityCheckProblem):
+class Q6(UzCheckProblem):
     """Harder: to'liq yechimni qo'lda yozish."""
     _hints = [
         "x_p=(1,0,6,0). Maxsus yechimlar s1=(-3,1,0,0), s2=(-2,0,-4,1).",
@@ -100,7 +100,7 @@ class Q6(EqualityCheckProblem):
 
 
 # Challenge 1
-class C1_Q1(EqualityCheckProblem):
+class C1_Q1(UzCheckProblem):
     """Mos bo'lmagan tizimni aniqlash."""
     _hints = [
         "Agar reduksiyada [0 ... 0 | c] (c!=0) satr chiqsa, yechim yo'q.",

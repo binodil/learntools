@@ -1,9 +1,9 @@
 """Hints and solutions — Dars 9.2: Hermitian va Unitariy Matritsalar."""
 import numpy as np
-from learntools.core import EqualityCheckProblem, ThoughtExperiment
+from learntools.linear_algebra_uz.base import UzCheckProblem, ThoughtExperiment
 
 
-class Q1(EqualityCheckProblem):
+class Q1(UzCheckProblem):
     """A Hermitian ekanini tekshiring: A = A*ᵀ (konjugat transponent)."""
     _hints = ["A.conj().T yoki A.T.conj() — konjugat transponent. np.allclose(A, A.conj().T)."]
     _solution = "is_herm = np.allclose(A, A.conj().T)"
@@ -15,7 +15,7 @@ class Q1(EqualityCheckProblem):
         return True
 
 
-class Q2(EqualityCheckProblem):
+class Q2(UzCheckProblem):
     """Hermitian matritsaning xususiy qiymatlari haqiqiy ekanini tasdiqlang."""
     _hints = [
         "np.linalg.eigh(A) — Hermitian matritsa uchun haqiqiy xususiy qiymatlar.",
@@ -32,7 +32,7 @@ class Q2(EqualityCheckProblem):
         return True
 
 
-class Q3(EqualityCheckProblem):
+class Q3(UzCheckProblem):
     """U unitariy ekanini tekshiring: U*ᵀ U = I."""
     _hints = ["U.conj().T @ U = I bo'lsa unitariy. np.allclose(U.conj().T @ U, np.eye(n))."]
     _solution = "is_unitary = np.allclose(U.conj().T @ U, np.eye(U.shape[0]))"
@@ -46,7 +46,7 @@ class Q3(EqualityCheckProblem):
         return True
 
 
-class Q4(EqualityCheckProblem):
+class Q4(UzCheckProblem):
     """Unitariy o'zgartirishda vektor normasini saqlang: ||Uv|| = ||v||."""
     _hints = [
         "Unitariy U uchun ||Uv|| = ||v||. np.linalg.norm(U @ v).",
@@ -65,7 +65,7 @@ class Q4(EqualityCheckProblem):
         return True
 
 
-class Q5(EqualityCheckProblem):
+class Q5(UzCheckProblem):
     """Hermitian spektral teorema: A = Q Λ Q*ᵀ."""
     _hints = ["vals, Q = np.linalg.eigh(A). A_rec = Q @ np.diag(vals) @ Q.conj().T"]
     _solution = "vals, Q = np.linalg.eigh(A); A_rec = Q @ np.diag(vals) @ Q.conj().T"
@@ -80,7 +80,7 @@ class Q5(EqualityCheckProblem):
         return True
 
 
-class Q6(EqualityCheckProblem):
+class Q6(UzCheckProblem):
     """Pauli matritsalari Hermitian va iz=0 ekanini tekshiring."""
     _hints = [
         "Pauli: σx=[[0,1],[1,0]], σy=[[0,-i],[i,0]], σz=[[1,0],[0,-1]].",
@@ -100,7 +100,7 @@ class Q6(EqualityCheckProblem):
         return True
 
 
-class C1_Q1(EqualityCheckProblem):
+class C1_Q1(UzCheckProblem):
     """QFT (kvant Fourier transformatsiyasi) matritsasini yarating."""
     _hints = [
         "QFT matritsasi: F[j,k] = ω^(jk) / sqrt(n), ω = e^{2πi/n}.",

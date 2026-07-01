@@ -1,9 +1,9 @@
 """Hints and solutions — Dars 7.3: PCA by the SVD."""
 import numpy as np
-from learntools.core import EqualityCheckProblem, ThoughtExperiment
+from learntools.linear_algebra_uz.base import UzCheckProblem, ThoughtExperiment
 
 
-class Q1(EqualityCheckProblem):
+class Q1(UzCheckProblem):
     """Ma'lumotlarni markazlashtiring (mean-center)."""
     _hints = [
         "Har bir xususiyatning o'rtachasini ayiring: X_centered = X - X.mean(axis=0).",
@@ -19,7 +19,7 @@ class Q1(EqualityCheckProblem):
         return True
 
 
-class Q2(EqualityCheckProblem):
+class Q2(UzCheckProblem):
     """SVD orqali asosiy komponentlarni toping."""
     _hints = [
         "U, s, Vt = np.linalg.svd(X_c, full_matrices=False). Asosiy yo'nalishlar — Vt qatorlari.",
@@ -38,7 +38,7 @@ class Q2(EqualityCheckProblem):
         return True
 
 
-class Q3(EqualityCheckProblem):
+class Q3(UzCheckProblem):
     """Explained variance (tushuntirilgan dispersiya) ni hisoblang."""
     _hints = [
         "Dispersiya: s² / sum(s²). U, s, Vt = svd(X_c) dan s — singular qiymatlar.",
@@ -53,7 +53,7 @@ class Q3(EqualityCheckProblem):
         return True
 
 
-class Q4(EqualityCheckProblem):
+class Q4(UzCheckProblem):
     """Ma'lumotlarni k-ta asosiy komponentga proyeksiyalang."""
     _hints = [
         "X_k = X_c @ Vt[:k].T — k ta asosiy komponent sifatida.",
@@ -73,7 +73,7 @@ class Q4(EqualityCheckProblem):
         return True
 
 
-class Q5(EqualityCheckProblem):
+class Q5(UzCheckProblem):
     """k-komponent bilan qayta tiklash va xatoni hisoblang."""
     _hints = [
         "X_rec = X_k @ Vt[:k]. Xato: ||X_c - X_rec||_F.",
@@ -95,7 +95,7 @@ class Q5(EqualityCheckProblem):
         return True
 
 
-class Q6(EqualityCheckProblem):
+class Q6(UzCheckProblem):
     """Nechta komponent kerakligini aniqlang (95% dispersiya)."""
     _hints = [
         "cumsum(var_ratio) >= 0.95 bo'ladigan birinchi k ni toping.",
@@ -116,7 +116,7 @@ class Q6(EqualityCheckProblem):
         return True
 
 
-class C1_Q1(EqualityCheckProblem):
+class C1_Q1(UzCheckProblem):
     """PCA bilan rasm siqishini simulyatsiya qiling."""
     _hints = [
         "20×20 tasodifiy matritsa yarating, SVD dan k=5 komponent bilan siqib, xatoni hisoblang.",

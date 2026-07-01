@@ -1,9 +1,9 @@
 """Hints and solutions — Dars 7.1: Rasmlarni Chiziqli Algebra bilan Qayta Ishlash."""
 import numpy as np
-from learntools.core import EqualityCheckProblem, ThoughtExperiment
+from learntools.linear_algebra_uz.base import UzCheckProblem, ThoughtExperiment
 
 
-class Q1(EqualityCheckProblem):
+class Q1(UzCheckProblem):
     """SVD ni hisoblang."""
     _hints = [
         "np.linalg.svd(A, full_matrices=False) U, s, Vt qaytaradi.",
@@ -18,7 +18,7 @@ class Q1(EqualityCheckProblem):
         return True
 
 
-class Q2(EqualityCheckProblem):
+class Q2(UzCheckProblem):
     """Rang-k taxminlash A_k ni quring."""
     _hints = [
         "A_k = U[:,:k] @ diag(s[:k]) @ Vt[:k,:].",
@@ -33,7 +33,7 @@ class Q2(EqualityCheckProblem):
         return True
 
 
-class Q3(EqualityCheckProblem):
+class Q3(UzCheckProblem):
     """Eckart-Young xatosini hisoblang."""
     _hints = [
         "Frobenius xatosi = sqrt(qolgan sigma kvadratlari yig'indisi).",
@@ -48,7 +48,7 @@ class Q3(EqualityCheckProblem):
         return True
 
 
-class Q4(EqualityCheckProblem):
+class Q4(UzCheckProblem):
     """Saqlangan energiya nisbati."""
     _hints = [
         "Energiya = sigma kvadratlari.",
@@ -63,7 +63,7 @@ class Q4(EqualityCheckProblem):
         return True
 
 
-class Q5(EqualityCheckProblem):
+class Q5(UzCheckProblem):
     """Matritsa rangi = noldan farqli singulyar qiymatlar soni."""
     _hints = [
         "rank = (s > tolerance).sum().",
@@ -78,7 +78,7 @@ class Q5(EqualityCheckProblem):
         return True
 
 
-class Q6(EqualityCheckProblem):
+class Q6(UzCheckProblem):
     """Siqish nisbatini hisoblang (saqlangan sonlar / asl)."""
     _hints = [
         "Rang-k uchun saqlanadi: k*(m + n + 1) son.",
@@ -94,7 +94,7 @@ class Q6(EqualityCheckProblem):
 
 
 # Challenge 1
-class C1_Q1(EqualityCheckProblem):
+class C1_Q1(UzCheckProblem):
     """90% energiya uchun zarur k ni toping."""
     _hints = [
         "Kumulyativ energiya nisbatini hisoblang.",

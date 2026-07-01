@@ -1,9 +1,9 @@
 """Hints and solutions — Dars 6.1: Xususiy Qiymatlarga Kirish."""
 import numpy as np
-from learntools.core import EqualityCheckProblem, ThoughtExperiment
+from learntools.linear_algebra_uz.base import UzCheckProblem, ThoughtExperiment
 
 
-class Q1(EqualityCheckProblem):
+class Q1(UzCheckProblem):
     """Diagonal matritsa xususiy qiymatlari."""
     _hints = [
         "Diagonal matritsa uchun xususiy qiymatlar — diagonal elementlar.",
@@ -17,7 +17,7 @@ class Q1(EqualityCheckProblem):
         return True
 
 
-class Q2(EqualityCheckProblem):
+class Q2(UzCheckProblem):
     """Xarakteristik tenglamadan lambda toping (2x2)."""
     _hints = [
         "det(A - lambda I) = 0 ni yeching.",
@@ -32,7 +32,7 @@ class Q2(EqualityCheckProblem):
         return True
 
 
-class Q3(EqualityCheckProblem):
+class Q3(UzCheckProblem):
     """A x = lambda x ni tekshiring."""
     _hints = [
         "x — xususiy vektor, lambda — mos qiymat.",
@@ -47,7 +47,7 @@ class Q3(EqualityCheckProblem):
         return True
 
 
-class Q4(EqualityCheckProblem):
+class Q4(UzCheckProblem):
     """Iz = xususiy qiymatlar yig'indisi."""
     _hints = [
         "trace(A) = lambda_1 + lambda_2 + ... .",
@@ -62,7 +62,7 @@ class Q4(EqualityCheckProblem):
         return True
 
 
-class Q5(EqualityCheckProblem):
+class Q5(UzCheckProblem):
     """det = xususiy qiymatlar ko'paytmasi."""
     _hints = [
         "det(A) = lambda_1 * lambda_2.",
@@ -77,7 +77,7 @@ class Q5(EqualityCheckProblem):
         return True
 
 
-class Q6(EqualityCheckProblem):
+class Q6(UzCheckProblem):
     """(A - lambda I) singular ekanini tekshiring (det = 0)."""
     _hints = [
         "Agar lambda haqiqiy xususiy qiymat bo'lsa, det(A - lambda I) = 0.",
@@ -91,7 +91,7 @@ class Q6(EqualityCheckProblem):
         return True
 
 
-class C1_Q1(EqualityCheckProblem):
+class C1_Q1(UzCheckProblem):
     """Xususiy vektorni normallashtiring va A x = lambda x tekshiring."""
     _hints = [
         "(A - lambda I) x = 0 yechimini toping.",

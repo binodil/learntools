@@ -1,9 +1,9 @@
 """Hints and solutions — Dars 5.1: Determinant Xossalari."""
 import numpy as np
-from learntools.core import EqualityCheckProblem, ThoughtExperiment
+from learntools.linear_algebra_uz.base import UzCheckProblem, ThoughtExperiment
 
 
-class Q1(EqualityCheckProblem):
+class Q1(UzCheckProblem):
     """2x2 determinantni qo'lda hisoblang."""
     _hints = [
         "2x2 uchun det = ad - bc.",
@@ -17,7 +17,7 @@ class Q1(EqualityCheckProblem):
         return True
 
 
-class Q2(EqualityCheckProblem):
+class Q2(UzCheckProblem):
     """Singular matritsa determinanti."""
     _hints = [
         "Ustunlar parallel bo'lsa det = 0.",
@@ -31,7 +31,7 @@ class Q2(EqualityCheckProblem):
         return True
 
 
-class Q3(EqualityCheckProblem):
+class Q3(UzCheckProblem):
     """P9: det(AB) = det(A)det(B)."""
     _hints = [
         "Avval det(A) va det(B) ni alohida toping.",
@@ -46,7 +46,7 @@ class Q3(EqualityCheckProblem):
         return True
 
 
-class Q4(EqualityCheckProblem):
+class Q4(UzCheckProblem):
     """P7: uchburchak matritsa determinanti = diagonal ko'paytmasi."""
     _hints = [
         "Uchburchak matritsa uchun det = diagonal elementlar ko'paytmasi.",
@@ -61,7 +61,7 @@ class Q4(EqualityCheckProblem):
         return True
 
 
-class Q5(EqualityCheckProblem):
+class Q5(UzCheckProblem):
     """det(cA) = c^n det(A)."""
     _hints = [
         "n x n matritsa uchun det(cA) = c^n * det(A).",
@@ -77,7 +77,7 @@ class Q5(EqualityCheckProblem):
         return True
 
 
-class Q6(EqualityCheckProblem):
+class Q6(UzCheckProblem):
     """3x3 determinant — eliminatsiya/numpy bilan."""
     _hints = [
         "np.linalg.det(A) dan foydalaning.",
@@ -93,7 +93,7 @@ class Q6(EqualityCheckProblem):
         return True
 
 
-class C1_Q1(EqualityCheckProblem):
+class C1_Q1(UzCheckProblem):
     """det(A^{-1}) = 1/det(A) ni tekshiring."""
     _hints = [
         "Teskari matritsa determinanti = 1 / det(A).",

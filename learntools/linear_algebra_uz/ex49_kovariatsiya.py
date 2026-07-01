@@ -1,9 +1,9 @@
 """Hints and solutions — Dars 12.2: Kovariatsiya Matritsalari va Birgalikdagi Ehtimollik."""
 import numpy as np
-from learntools.core import EqualityCheckProblem, ThoughtExperiment
+from learntools.linear_algebra_uz.base import UzCheckProblem, ThoughtExperiment
 
 
-class Q1(EqualityCheckProblem):
+class Q1(UzCheckProblem):
     """Kovariatsiya matritsasini hisoblang: Σ = (1/n) Xc.T @ Xc."""
     _hints = ["X ni markazlashtiring: Xc = X - mean. Keyin Sigma = Xc.T @ Xc / n."]
     _solution = "Xc = X - X.mean(axis=0); Sigma = Xc.T @ Xc / len(X)"
@@ -18,7 +18,7 @@ class Q1(EqualityCheckProblem):
         return True
 
 
-class Q2(EqualityCheckProblem):
+class Q2(UzCheckProblem):
     """np.cov dan foydalanib kovariatsiya matritsasini hisoblang."""
     _hints = ["np.cov(X.T) — X ustunlari o'zgaruvchilar bo'lsa."]
     _solution = "Sigma = np.cov(X.T)"
@@ -30,7 +30,7 @@ class Q2(EqualityCheckProblem):
         return True
 
 
-class Q3(EqualityCheckProblem):
+class Q3(UzCheckProblem):
     """Korrelyatsiya koeffitsiyentini hisoblang: r = Cov(X,Y) / (std_X * std_Y)."""
     _hints = ["np.corrcoef(x, y)[0,1] yoki Cov(x,y)/(std(x)*std(y))."]
     _solution = "r = np.corrcoef(x, y)[0, 1]"
@@ -42,7 +42,7 @@ class Q3(EqualityCheckProblem):
         return True
 
 
-class Q4(EqualityCheckProblem):
+class Q4(UzCheckProblem):
     """Kovariatsiya matritsasi PSD ekanini tekshiring (barcha eig >= 0)."""
     _hints = ["np.linalg.eigvalsh(Sigma) — barcha qiymatlar >= 0 bo'lsa PSD."]
     _solution = "is_psd = np.all(np.linalg.eigvalsh(Sigma) >= -1e-10)"
@@ -55,7 +55,7 @@ class Q4(EqualityCheckProblem):
         return True
 
 
-class Q5(EqualityCheckProblem):
+class Q5(UzCheckProblem):
     """PCA: kovariatsiya matritsasining xususiy vektorlari — asosiy yo'nalishlar."""
     _hints = [
         "vals, vecs = np.linalg.eigh(Sigma). Eng katta xususiy qiymatga mos vektor — 1-komponent.",
@@ -70,7 +70,7 @@ class Q5(EqualityCheckProblem):
         return True
 
 
-class Q6(EqualityCheckProblem):
+class Q6(UzCheckProblem):
     """Mahalanobis masofasi: d² = (x-mu)ᵀ Σ⁻¹ (x-mu)."""
     _hints = [
         "Sigma_inv = np.linalg.inv(Sigma). d2 = delta.T @ Sigma_inv @ delta, delta = x - mu.",
@@ -86,7 +86,7 @@ class Q6(EqualityCheckProblem):
         return True
 
 
-class C1_Q1(EqualityCheckProblem):
+class C1_Q1(UzCheckProblem):
     """Cholesky bilan korrelyatsiyalangan ma'lumot generatsiyasi."""
     _hints = [
         "Sigma = [[1, rho],[rho, 1]]. L = cholesky(Sigma). X = (L @ Z.T).T, Z ~ N(0,I).",

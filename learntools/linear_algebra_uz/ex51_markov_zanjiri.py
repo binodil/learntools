@@ -1,9 +1,9 @@
 """Hints and solutions — Dars 12.4: Markov Zanjiri."""
 import numpy as np
-from learntools.core import EqualityCheckProblem, ThoughtExperiment
+from learntools.linear_algebra_uz.base import UzCheckProblem, ThoughtExperiment
 
 
-class Q1(EqualityCheckProblem):
+class Q1(UzCheckProblem):
     """O'tish matritsasini tekshiring: ustunlar yig'indisi = 1, barcha element >= 0."""
     _hints = ["np.allclose(P.sum(axis=0), 1) va np.all(P >= 0)."]
     _solution = "valid = np.allclose(P.sum(axis=0), 1) and np.all(P >= 0)"
@@ -15,7 +15,7 @@ class Q1(EqualityCheckProblem):
         return True
 
 
-class Q2(EqualityCheckProblem):
+class Q2(UzCheckProblem):
     """k-qadam o'tish: P^k."""
     _hints = ["np.linalg.matrix_power(P, k)."]
     _solution = "Pk = np.linalg.matrix_power(P, k)"
@@ -27,7 +27,7 @@ class Q2(EqualityCheckProblem):
         return True
 
 
-class Q3(EqualityCheckProblem):
+class Q3(UzCheckProblem):
     """Barqaror taqsimot: Pπ = π (xususiy vektor lambda=1 uchun)."""
     _hints = [
         "vals, vecs = np.linalg.eig(P). lambda=1 ga mos vektor — barqaror taqsimot.",
@@ -48,7 +48,7 @@ class Q3(EqualityCheckProblem):
         return True
 
 
-class Q4(EqualityCheckProblem):
+class Q4(UzCheckProblem):
     """Absorbatsiya ehtimoli: absorbatsiya holatlariga yetish ehtimoli."""
     _hints = [
         "Q — o'tuvchi holatlar o'tish matritsasi. N = (I-Q)^{-1} — fundamental matritsa.",
@@ -71,7 +71,7 @@ class Q4(EqualityCheckProblem):
         return True
 
 
-class Q5(EqualityCheckProblem):
+class Q5(UzCheckProblem):
     """O'rtacha qaytish vaqti: m_i = 1/pi_i."""
     _hints = ["Barqaror taqsimot pi dan: m_i = 1/pi[i]."]
     _solution = (
@@ -91,7 +91,7 @@ class Q5(EqualityCheckProblem):
         return True
 
 
-class Q6(EqualityCheckProblem):
+class Q6(UzCheckProblem):
     """MCMC: Metropolis-Hastings bir qadami."""
     _hints = [
         "Taklif: x_new = x + epsilon * randn(). Accept: min(1, p(x_new)/p(x)).",
@@ -109,7 +109,7 @@ class Q6(EqualityCheckProblem):
         return True
 
 
-class C1_Q1(EqualityCheckProblem):
+class C1_Q1(UzCheckProblem):
     """Google PageRank: telekommunikatsiya matritsasi."""
     _hints = [
         "Damping: P_full = d * P + (1-d)/n * ones_matrix. pi = dominant eig vektor.",

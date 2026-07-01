@@ -1,9 +1,9 @@
 """Hints and solutions — Dars 11.1: Gauss Eliminatsiyasi Amalda."""
 import numpy as np
-from learntools.core import EqualityCheckProblem, ThoughtExperiment
+from learntools.linear_algebra_uz.base import UzCheckProblem, ThoughtExperiment
 
 
-class Q1(EqualityCheckProblem):
+class Q1(UzCheckProblem):
     """To'liq pivoting bilan Gauss eliminatsiyasi."""
     _hints = [
         "scipy.linalg.lu(A) — P, L, U yoyilmasi (qisman pivot bilan).",
@@ -21,7 +21,7 @@ class Q1(EqualityCheckProblem):
         return True
 
 
-class Q2(EqualityCheckProblem):
+class Q2(UzCheckProblem):
     """Pivot tanlash sababini ko'rsating: kichik pivot → katta xato."""
     _hints = [
         "A = [[1e-20, 1],[1, 1]]. Pivot = 1e-20. Xato: np.linalg.solve vs to'g'ri yechim.",
@@ -41,7 +41,7 @@ class Q2(EqualityCheckProblem):
         return True
 
 
-class Q3(EqualityCheckProblem):
+class Q3(UzCheckProblem):
     """Orqaga substitusiya (back substitution) ni qo'lda bajaring."""
     _hints = [
         "U x = b: x[n-1] = b[n-1]/U[n-1,n-1]; x[i] = (b[i] - sum U[i,j]*x[j]) / U[i,i].",
@@ -60,7 +60,7 @@ class Q3(EqualityCheckProblem):
         return True
 
 
-class Q4(EqualityCheckProblem):
+class Q4(UzCheckProblem):
     """LU bilan bir nechta o'ng tomonlarni yeching."""
     _hints = [
         "LU yoyilmasi bir marta, keyin har B ustuni uchun L y = b va U x = y.",
@@ -79,7 +79,7 @@ class Q4(EqualityCheckProblem):
         return True
 
 
-class Q5(EqualityCheckProblem):
+class Q5(UzCheckProblem):
     """Sanoat darajasidagi tizim uchun siyrak matritsa (sparse) yeching."""
     _hints = [
         "scipy.sparse.linalg.spsolve — katta siyrak sistemalar uchun.",
@@ -99,7 +99,7 @@ class Q5(EqualityCheckProblem):
         return True
 
 
-class Q6(EqualityCheckProblem):
+class Q6(UzCheckProblem):
     """Floating-point arifmetikasida yaxlit xato (roundoff)."""
     _hints = [
         "eps = np.finfo(float).eps — mashin aniqligi (~2.2e-16).",
@@ -115,7 +115,7 @@ class Q6(EqualityCheckProblem):
         return True
 
 
-class C1_Q1(EqualityCheckProblem):
+class C1_Q1(UzCheckProblem):
     """LAPACK DGESV algoritmini scipy bilan solishtiring."""
     _hints = [
         "np.linalg.solve A @ x = b uchun LAPACK DGESV ni chaqiradi.",

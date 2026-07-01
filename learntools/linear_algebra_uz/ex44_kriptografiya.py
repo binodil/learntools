@@ -1,9 +1,9 @@
 """Hints and solutions — Dars 10.7: Chiziqli Algebra va Kriptografiya."""
 import numpy as np
-from learntools.core import EqualityCheckProblem, ThoughtExperiment
+from learntools.linear_algebra_uz.base import UzCheckProblem, ThoughtExperiment
 
 
-class Q1(EqualityCheckProblem):
+class Q1(UzCheckProblem):
     """Hill shifri: C = A @ P (mod 26)."""
     _hints = [
         "Hill shifri: C = (A @ P) % 26, A — shifr matritsasi (invertibel mod 26).",
@@ -17,7 +17,7 @@ class Q1(EqualityCheckProblem):
         return True
 
 
-class Q2(EqualityCheckProblem):
+class Q2(UzCheckProblem):
     """Hill shifrini ochish: P = A⁻¹ @ C (mod 26)."""
     _hints = [
         "Modul bo'yicha teskari: det_inv = pow(int(round(np.linalg.det(A))), -1, 26).",
@@ -42,7 +42,7 @@ class Q2(EqualityCheckProblem):
         return True
 
 
-class Q3(EqualityCheckProblem):
+class Q3(UzCheckProblem):
     """Error-correcting code: parity check matritsasi H @ c = 0 ekanini tekshiring."""
     _hints = [
         "H @ c = 0 (mod 2) bo'lsa — kod so'zi to'g'ri (hech qanday xato yo'q).",
@@ -57,7 +57,7 @@ class Q3(EqualityCheckProblem):
         return True
 
 
-class Q4(EqualityCheckProblem):
+class Q4(UzCheckProblem):
     """Xato pozitsiyasini sindrom bilan toping."""
     _hints = [
         "Sindrom s = H @ r mod 2. s ning ustun raqami xato pozitsiyasini beradi.",
@@ -78,7 +78,7 @@ class Q4(EqualityCheckProblem):
         return True
 
 
-class Q5(EqualityCheckProblem):
+class Q5(UzCheckProblem):
     """RSA: n = p*q, e*d ≡ 1 (mod φ(n)) ni tekshiring."""
     _hints = [
         "φ(n) = (p-1)*(q-1). e*d mod φ(n) = 1.",
@@ -93,7 +93,7 @@ class Q5(EqualityCheckProblem):
         return True
 
 
-class Q6(EqualityCheckProblem):
+class Q6(UzCheckProblem):
     """AES S-box: GF(2⁸) da affin transformatsiya."""
     _hints = [
         "AES S-box affin transformatsiyasi: b = A*x + c (mod 2, GF(2⁸) da).",
@@ -108,7 +108,7 @@ class Q6(EqualityCheckProblem):
         return True
 
 
-class C1_Q1(EqualityCheckProblem):
+class C1_Q1(UzCheckProblem):
     """Diffie-Hellman kalitlar almashinuvi: A = g^a mod p."""
     _hints = [
         "A = pow(g, a, p) — Python da modular darajaga ko'tarish.",

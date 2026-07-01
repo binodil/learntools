@@ -1,9 +1,9 @@
 """Hints and solutions — Dars 10.5: Furye Qatori."""
 import numpy as np
-from learntools.core import EqualityCheckProblem, ThoughtExperiment
+from learntools.linear_algebra_uz.base import UzCheckProblem, ThoughtExperiment
 
 
-class Q1(EqualityCheckProblem):
+class Q1(UzCheckProblem):
     """Furye koeffitsiyentlarini hisoblang: a_k = (2/T) ∫ f(x) cos(2πkx/T) dx."""
     _hints = [
         "Diskret taqrib: a_k ≈ (2/N) sum(f[n] * cos(2*pi*k*n/N)) for n in range(N).",
@@ -21,7 +21,7 @@ class Q1(EqualityCheckProblem):
         return True
 
 
-class Q2(EqualityCheckProblem):
+class Q2(UzCheckProblem):
     """Furye sinus koeffitsiyentlarini hisoblang: b_k."""
     _hints = [
         "b_k ≈ (2/N) sum(f[n] * sin(2*pi*k*n/N)) for n in range(N).",
@@ -36,7 +36,7 @@ class Q2(EqualityCheckProblem):
         return True
 
 
-class Q3(EqualityCheckProblem):
+class Q3(UzCheckProblem):
     """Furye qatorini birinchi K a'zo orqali tiklang."""
     _hints = [
         "f_approx = a_0/2 + sum(a_k*cos(2*pi*k*x/T) + b_k*sin(2*pi*k*x/T) for k=1..K).",
@@ -64,7 +64,7 @@ class Q3(EqualityCheckProblem):
         return True
 
 
-class Q4(EqualityCheckProblem):
+class Q4(UzCheckProblem):
     """Ortogonallik: cos va sin funksiyalari ortogonal ekanini tekshiring."""
     _hints = [
         "(1/pi) integral cos(mx)*cos(nx) dx = 0 agar m!=n. Diskret: sum(cos_m * cos_n) / N.",
@@ -88,7 +88,7 @@ class Q4(EqualityCheckProblem):
         return True
 
 
-class Q5(EqualityCheckProblem):
+class Q5(UzCheckProblem):
     """Gibb hodisasi: kvadrat to'lqin uchun Furye qatorini K=50 bilan hisoblang."""
     _hints = [
         "Kvadrat to'lqin: f(x) = sign(sin(x)). Furye: faqat toq harmonikalar.",
@@ -113,7 +113,7 @@ class Q5(EqualityCheckProblem):
         return True
 
 
-class Q6(EqualityCheckProblem):
+class Q6(UzCheckProblem):
     """Furye qatori yordamida tugunlararo interpolyatsiya."""
     _hints = [
         "Furye interpolyatsiya: fft → koeffitsiyentlar → yangi nuqtalarda ifft.",
@@ -137,7 +137,7 @@ class Q6(EqualityCheckProblem):
         return True
 
 
-class C1_Q1(EqualityCheckProblem):
+class C1_Q1(UzCheckProblem):
     """MP3 audio siqish: quloq eshitmaydigan chastotalarni o'chiring."""
     _hints = [
         "FFT → |X[k]| < threshold bo'lganlarni nolga → IFFT.",

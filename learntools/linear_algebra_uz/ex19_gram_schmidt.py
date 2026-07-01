@@ -1,9 +1,9 @@
 """Hints and solutions — Dars 4.4: Ortonormal Bazalar va Gram-Schmidt."""
 import numpy as np
-from learntools.core import EqualityCheckProblem, ThoughtExperiment
+from learntools.linear_algebra_uz.base import UzCheckProblem, ThoughtExperiment
 
 
-class Q1(EqualityCheckProblem):
+class Q1(UzCheckProblem):
     """Vektorni normallashtiring (birlik vektori)."""
     _hints = [
         "Birlik vektor: u = v / ||v|| = v / np.linalg.norm(v).",
@@ -19,7 +19,7 @@ class Q1(EqualityCheckProblem):
         return True
 
 
-class Q2(EqualityCheckProblem):
+class Q2(UzCheckProblem):
     """Gram-Schmidt: a1, a2 dan q1, q2 ortonormal bazis hosil qiling."""
     _hints = [
         "q1 = a1 / ||a1||, so'ng A2 = a2 - (a2·q1)q1, q2 = A2 / ||A2||.",
@@ -44,7 +44,7 @@ class Q2(EqualityCheckProblem):
         return True
 
 
-class Q3(EqualityCheckProblem):
+class Q3(UzCheckProblem):
     """QR yoyilmasini hisoblang."""
     _hints = [
         "np.linalg.qr(A) Q va R ni qaytaradi.",
@@ -60,7 +60,7 @@ class Q3(EqualityCheckProblem):
         return True
 
 
-class Q4(EqualityCheckProblem):
+class Q4(UzCheckProblem):
     """Ortonormal ustunlar matritsasi Q uchun ||Qx|| = ||x|| ekanini tekshiring."""
     _hints = [
         "Q izometrik (uzunlikni saqlovchi): ||Qx||² = xᵀQᵀQx = xᵀIx = ||x||².",
@@ -77,7 +77,7 @@ class Q4(EqualityCheckProblem):
         return True
 
 
-class Q5(EqualityCheckProblem):
+class Q5(UzCheckProblem):
     """Ax = b ni QR yordamida yeching: Rx = Qᵀb."""
     _hints = [
         "A = QR, shuning uchun QRx = b → Rx = Qᵀb (chunki Qᵀ Q = I).",
@@ -92,7 +92,7 @@ class Q5(EqualityCheckProblem):
         return True
 
 
-class Q6(EqualityCheckProblem):
+class Q6(UzCheckProblem):
     """Uch vektor uchun to'liq Gram-Schmidt jarayoni."""
     _hints = [
         "Har bir vektordagi avvalgi bazis vektorlariga tushuvchi qismlarni ayiring.",
@@ -119,7 +119,7 @@ class Q6(EqualityCheckProblem):
         return True
 
 
-class C1_Q1(EqualityCheckProblem):
+class C1_Q1(UzCheckProblem):
     """QR yordamida kichik kvadratlar yechimi."""
     _hints = [
         "A = QR, normal tenglama: Rx̂ = Qᵀb.",

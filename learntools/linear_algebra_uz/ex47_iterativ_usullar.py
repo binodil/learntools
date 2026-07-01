@@ -1,9 +1,9 @@
 """Hints and solutions — Dars 11.3: Iterativ Usullar va Prekonditsionirovanie."""
 import numpy as np
-from learntools.core import EqualityCheckProblem, ThoughtExperiment
+from learntools.linear_algebra_uz.base import UzCheckProblem, ThoughtExperiment
 
 
-class Q1(EqualityCheckProblem):
+class Q1(UzCheckProblem):
     """Yakobi iteratsiyasi: x^{k+1} = D⁻¹(b - (L+U)x^k)."""
     _hints = [
         "D = diag(A). x_new = (b - (A - D) @ x) / np.diag(A).",
@@ -23,7 +23,7 @@ class Q1(EqualityCheckProblem):
         return True
 
 
-class Q2(EqualityCheckProblem):
+class Q2(UzCheckProblem):
     """Gauss-Zeidel iteratsiyasi (oldinga va orqaga substitusiya birlashtirib)."""
     _hints = [
         "x[i] = (b[i] - sum_{j<i} A[i,j]*x[j] - sum_{j>i} A[i,j]*x_old[j]) / A[i,i].",
@@ -43,7 +43,7 @@ class Q2(EqualityCheckProblem):
         return True
 
 
-class Q3(EqualityCheckProblem):
+class Q3(UzCheckProblem):
     """Gradiyent tushish (gradient descent) Ax=b uchun."""
     _hints = [
         "r = b - A@x (qoldiq). x = x + alpha*r. alpha = rᵀr/(rᵀAr).",
@@ -65,7 +65,7 @@ class Q3(EqualityCheckProblem):
         return True
 
 
-class Q4(EqualityCheckProblem):
+class Q4(UzCheckProblem):
     """Konjugat gradiyent (CG) usuli — A simmetrik musbat aniq uchun."""
     _hints = [
         "scipy.sparse.linalg.cg(A, b) — CG yechuvchisi.",
@@ -80,7 +80,7 @@ class Q4(EqualityCheckProblem):
         return True
 
 
-class Q5(EqualityCheckProblem):
+class Q5(UzCheckProblem):
     """GMRES — nosimmetrik sistemalar uchun."""
     _hints = [
         "scipy.sparse.linalg.gmres(A, b) — umumiy sistemalar uchun Krylov usuli.",
@@ -96,7 +96,7 @@ class Q5(EqualityCheckProblem):
         return True
 
 
-class Q6(EqualityCheckProblem):
+class Q6(UzCheckProblem):
     """Diagonal prekonditsionirovanie: M⁻¹Ax = M⁻¹b, M = diag(A)."""
     _hints = [
         "M = diag(A). M_inv = 1/diag(A). A_prec = M_inv * A (satr bo'ylab).",
@@ -117,7 +117,7 @@ class Q6(EqualityCheckProblem):
         return True
 
 
-class C1_Q1(EqualityCheckProblem):
+class C1_Q1(UzCheckProblem):
     """Konvergentsiya tezligini solishtiring: Yakobi vs Gauss-Zeidel vs CG."""
     _hints = [
         "Har bir iteratsiyadan keyin qoldiq ||Ax-b|| ni saqlang va solishtiring.",

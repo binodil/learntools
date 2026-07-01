@@ -1,9 +1,9 @@
 """Hints and solutions — Dars 2.7: Transponent va Almashtirishlar."""
 import numpy as np
-from learntools.core import EqualityCheckProblem, ThoughtExperiment
+from learntools.linear_algebra_uz.base import UzCheckProblem, ThoughtExperiment
 
 
-class Q1(EqualityCheckProblem):
+class Q1(UzCheckProblem):
     """Transponent hisoblang."""
     _hints = ["A.T — NumPy da transponent."]
     _solution = "A_T = A.T"
@@ -14,7 +14,7 @@ class Q1(EqualityCheckProblem):
         return True
 
 
-class Q2(EqualityCheckProblem):
+class Q2(UzCheckProblem):
     """Simmetrik matritsa: A = A^T."""
     _hints = [
         "Simmetrik matritsa: A[i,j] = A[j,i] barcha i,j uchun.",
@@ -29,7 +29,7 @@ class Q2(EqualityCheckProblem):
         return True
 
 
-class Q3(EqualityCheckProblem):
+class Q3(UzCheckProblem):
     """Simmetrik matritsa yarating: S = A^T A."""
     _hints = [
         "Har qanday A uchun A^T A — simmetrik va musbat yarim aniq.",
@@ -46,7 +46,7 @@ class Q3(EqualityCheckProblem):
         return True
 
 
-class Q4(EqualityCheckProblem):
+class Q4(UzCheckProblem):
     """Almashtirish (permutation) matritsasi."""
     _hints = [
         "P — birlik matritsasining satrlarini qayta tartiblashtirish.",
@@ -65,7 +65,7 @@ class Q4(EqualityCheckProblem):
         return True
 
 
-class Q5(EqualityCheckProblem):
+class Q5(UzCheckProblem):
     """P^{-1} = P^T."""
     _hints = [
         "Almashtirish matritsalari uchun: P^{-1} = P^T",
@@ -97,7 +97,7 @@ class Q6(ThoughtExperiment):
 
 
 # Challenge 1
-class C1_Q1(EqualityCheckProblem):
+class C1_Q1(UzCheckProblem):
     """Barcha 3x3 almashtirish matritsalarini sanang."""
     _hints = [
         "3 elementning barcha permutatsiyalari: 3! = 6 ta.",

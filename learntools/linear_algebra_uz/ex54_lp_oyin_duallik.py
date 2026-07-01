@@ -1,9 +1,9 @@
 """Hints and solutions — Dars 13.3: Chiziqli Dasturlash, O'yin Nazariyasi va Duallik."""
 import numpy as np
-from learntools.core import EqualityCheckProblem, ThoughtExperiment
+from learntools.linear_algebra_uz.base import UzCheckProblem, ThoughtExperiment
 
 
-class Q1(EqualityCheckProblem):
+class Q1(UzCheckProblem):
     """LP: max cᵀx s.t. Ax <= b, x >= 0 (scipy.optimize.linprog)."""
     _hints = [
         "linprog minimizatsiya qiladi: min -cᵀx. A_ub=A, b_ub=b, bounds=(0,None).",
@@ -24,7 +24,7 @@ class Q1(EqualityCheckProblem):
         return True
 
 
-class Q2(EqualityCheckProblem):
+class Q2(UzCheckProblem):
     """LP duallik: primal max cᵀx → dual min bᵀy s.t. Aᵀy >= c, y >= 0."""
     _hints = [
         "Dual: min bᵀy s.t. Aᵀy >= c, y >= 0. linprog(-b, A_ub=-A.T, b_ub=-c).",
@@ -42,7 +42,7 @@ class Q2(EqualityCheckProblem):
         return True
 
 
-class Q3(EqualityCheckProblem):
+class Q3(UzCheckProblem):
     """Nol-summa o'yini: Nash muvozanati (minimax strategiya)."""
     _hints = [
         "Minimax: A o'yin matritsasi. LP: max v s.t. Aᵀp >= v*1, p >= 0, sum(p)=1.",
@@ -68,7 +68,7 @@ class Q3(EqualityCheckProblem):
         return True
 
 
-class Q4(EqualityCheckProblem):
+class Q4(UzCheckProblem):
     """Simpleks usuli: burchak nuqtalarda optimal yechim."""
     _hints = [
         "LP optimumi politopning burchak nuqtasida (vertex). Vertex: faol cheklovlar.",
@@ -95,7 +95,7 @@ class Q4(EqualityCheckProblem):
         return True
 
 
-class Q5(EqualityCheckProblem):
+class Q5(UzCheckProblem):
     """Transportatsiya masalasi: LP sifatida formulatsiya."""
     _hints = [
         "Xij: i manbadan j talabgorga miqdor. min sum cij*xij, s.t. supply/demand.",
@@ -128,7 +128,7 @@ class Q5(EqualityCheckProblem):
         return True
 
 
-class Q6(EqualityCheckProblem):
+class Q6(UzCheckProblem):
     """Kuchli duallik teoremasi: primal optimal = dual optimal."""
     _hints = [
         "Kuchli duallik (Strong Duality): LP uchun har doim primal = dual optimal.",
@@ -150,7 +150,7 @@ class Q6(EqualityCheckProblem):
         return True
 
 
-class C1_Q1(EqualityCheckProblem):
+class C1_Q1(UzCheckProblem):
     """Resurs taqsimlash masalasi: ishlab chiqarish LP."""
     _hints = [
         "max profit s.t. resource constraints. linprog(-profit, A_resources, b_capacity).",

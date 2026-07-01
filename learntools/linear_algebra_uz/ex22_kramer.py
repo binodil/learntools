@@ -1,9 +1,9 @@
 """Hints and solutions — Dars 5.3: Kramer Qoidasi, Teskari va Hajmlar."""
 import numpy as np
-from learntools.core import EqualityCheckProblem, ThoughtExperiment
+from learntools.linear_algebra_uz.base import UzCheckProblem, ThoughtExperiment
 
 
-class Q1(EqualityCheckProblem):
+class Q1(UzCheckProblem):
     """Kramer bilan x ni toping (B_1 ustun almashtirilgan)."""
     _hints = [
         "B1 — A ning 1-ustuni b bilan almashtirilgan matritsa.",
@@ -19,7 +19,7 @@ class Q1(EqualityCheckProblem):
         return True
 
 
-class Q2(EqualityCheckProblem):
+class Q2(UzCheckProblem):
     """Kramer bilan y (x2) ni toping."""
     _hints = [
         "B2 — A ning 2-ustuni b bilan almashtirilgan.",
@@ -35,7 +35,7 @@ class Q2(EqualityCheckProblem):
         return True
 
 
-class Q3(EqualityCheckProblem):
+class Q3(UzCheckProblem):
     """2x2 teskari matritsani formula bilan toping."""
     _hints = [
         "A^{-1} = 1/det * [[d,-b],[-c,a]].",
@@ -50,7 +50,7 @@ class Q3(EqualityCheckProblem):
         return True
 
 
-class Q4(EqualityCheckProblem):
+class Q4(UzCheckProblem):
     """Parallelogramm yuzasi = |det|."""
     _hints = [
         "Ustunlari a1, a2 bo'lgan matritsa determinanti modulini oling.",
@@ -65,7 +65,7 @@ class Q4(EqualityCheckProblem):
         return True
 
 
-class Q5(EqualityCheckProblem):
+class Q5(UzCheckProblem):
     """Uchburchak yuzasi (uchlari berilgan)."""
     _hints = [
         "Yuza = 0.5 * |det([P2-P1, P3-P1])|.",
@@ -80,7 +80,7 @@ class Q5(EqualityCheckProblem):
         return True
 
 
-class Q6(EqualityCheckProblem):
+class Q6(UzCheckProblem):
     """det = xususiy qiymatlar ko'paytmasi."""
     _hints = [
         "det(A) = lambda_1 * lambda_2 * ... * lambda_n.",
@@ -95,7 +95,7 @@ class Q6(EqualityCheckProblem):
         return True
 
 
-class C1_Q1(EqualityCheckProblem):
+class C1_Q1(UzCheckProblem):
     """3x3 parallelepiped hajmi."""
     _hints = [
         "Hajm = |det([a1 a2 a3])|.",

@@ -1,9 +1,9 @@
 """Hints and solutions — Dars 8.3: Yaxshi Bazani Qidirish."""
 import numpy as np
-from learntools.core import EqualityCheckProblem, ThoughtExperiment
+from learntools.linear_algebra_uz.base import UzCheckProblem, ThoughtExperiment
 
 
-class Q1(EqualityCheckProblem):
+class Q1(UzCheckProblem):
     """Ikki matritsa o'xshash (similar) ekanini tekshiring: B = P⁻¹AP."""
     _hints = [
         "O'xshash matritsalar: xususiy qiymatlar va iz (trace) bir xil.",
@@ -25,7 +25,7 @@ class Q1(EqualityCheckProblem):
         return True
 
 
-class Q2(EqualityCheckProblem):
+class Q2(UzCheckProblem):
     """Jordan normal shakl: blokli diagonal ko'rinishga keltiring."""
     _hints = [
         "Jordan shakl: xususiy qiymatlar bo'yicha bloklarga ajratish.",
@@ -41,7 +41,7 @@ class Q2(EqualityCheckProblem):
         return True
 
 
-class Q3(EqualityCheckProblem):
+class Q3(UzCheckProblem):
     """O'xshash matritsaning determinant va izini hisoblang."""
     _hints = [
         "O'xshash matritsalar: det(A) = det(B), tr(A) = tr(B).",
@@ -59,7 +59,7 @@ class Q3(EqualityCheckProblem):
         return True
 
 
-class Q4(EqualityCheckProblem):
+class Q4(UzCheckProblem):
     """Cayley-Hamilton teoremasi: p(A) = 0, bu erda p — xarakteristik polinom."""
     _hints = [
         "2x2 uchun: A² - tr(A)*A + det(A)*I = 0.",
@@ -87,7 +87,7 @@ class Q4(EqualityCheckProblem):
         return True
 
 
-class Q5(EqualityCheckProblem):
+class Q5(UzCheckProblem):
     """SVD bilan yaxshi baza: A ning singular vektorlari."""
     _hints = [
         "U, s, Vt = np.linalg.svd(A). V ustunlari — kirish uchun yaxshi baza, U — chiqish uchun.",
@@ -106,7 +106,7 @@ class Q5(EqualityCheckProblem):
         return True
 
 
-class Q6(EqualityCheckProblem):
+class Q6(UzCheckProblem):
     """A^k ni tez hisoblash: diagonallashtirish orqali."""
     _hints = [
         "A = PΛP⁻¹ bo'lsa, A^k = PΛ^kP⁻¹.",
@@ -124,7 +124,7 @@ class Q6(EqualityCheckProblem):
         return True
 
 
-class C1_Q1(EqualityCheckProblem):
+class C1_Q1(UzCheckProblem):
     """Google PageRank: A ning dominant xususiy vektori."""
     _hints = [
         "Power iteration: v ← Av / ||Av|| ni takrorlang (konvergensiya bo'lguncha).",

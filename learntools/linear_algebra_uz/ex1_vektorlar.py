@@ -1,9 +1,9 @@
 """Hints and solutions — Dars 1.1: Vektorlar va Chiziqli Kombinatsiyalar."""
 import numpy as np
-from learntools.core import EqualityCheckProblem, ThoughtExperiment
+from learntools.linear_algebra_uz.base import UzCheckProblem, ThoughtExperiment
 
 
-class Q1(EqualityCheckProblem):
+class Q1(UzCheckProblem):
     """Vektor yarating."""
     _hints = [
         "np.array([...]) yordamida vektor yasashingiz mumkin.",
@@ -20,7 +20,7 @@ class Q1(EqualityCheckProblem):
         return True
 
 
-class Q2(EqualityCheckProblem):
+class Q2(UzCheckProblem):
     """Ikkita vektorni qo'shing."""
     _hints = [
         "NumPy da vektorlarni + operatori bilan qo'shish mumkin.",
@@ -35,7 +35,7 @@ class Q2(EqualityCheckProblem):
         return True
 
 
-class Q3(EqualityCheckProblem):
+class Q3(UzCheckProblem):
     """Skalyarga ko'paytiring."""
     _hints = [
         "c * v — vektorni skalyarga ko'paytirish.",
@@ -50,7 +50,7 @@ class Q3(EqualityCheckProblem):
         return True
 
 
-class Q4(EqualityCheckProblem):
+class Q4(UzCheckProblem):
     """Chiziqli kombinatsiya."""
     _hints = [
         "Chiziqli kombinatsiya: c1*v1 + c2*v2 + ... + cn*vn",
@@ -78,7 +78,7 @@ class Q5(ThoughtExperiment):
     )
 
 
-class Q6(EqualityCheckProblem):
+class Q6(UzCheckProblem):
     """Chiziqli kombinatsiya bilan [1,0] hosil qiling."""
     _hints = [
         "v1 = [1, 1], v2 = [1, -1] vektorlari berilgan. [1, 0] ni hosil qiling.",
@@ -94,7 +94,7 @@ class Q6(EqualityCheckProblem):
 
 
 # Challenge 1
-class C1_Q1(EqualityCheckProblem):
+class C1_Q1(UzCheckProblem):
     """Ixtiyoriy uchta vektor bilan tekislikni qoplang."""
     _hints = [
         "Agar ikkita vektor chiziqli mustaqil bo'lsa, ularning barcha chiziqli kombinatsiyalari R^2 ni qoplaydi.",

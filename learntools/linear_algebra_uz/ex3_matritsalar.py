@@ -1,9 +1,9 @@
 """Hints and solutions — Dars 1.3: Matritsalar."""
 import numpy as np
-from learntools.core import EqualityCheckProblem, ThoughtExperiment
+from learntools.linear_algebra_uz.base import UzCheckProblem, ThoughtExperiment
 
 
-class Q1(EqualityCheckProblem):
+class Q1(UzCheckProblem):
     """Matritsa yarating."""
     _hints = [
         "np.array([[satır1], [satır2], ...]) bilan matritsa yarating.",
@@ -19,7 +19,7 @@ class Q1(EqualityCheckProblem):
         return True
 
 
-class Q2(EqualityCheckProblem):
+class Q2(UzCheckProblem):
     """Matritsa-vektor ko'paytmasi."""
     _hints = [
         "A @ v yoki np.dot(A, v) — matritsa-vektor ko'paytmasi.",
@@ -34,7 +34,7 @@ class Q2(EqualityCheckProblem):
         return True
 
 
-class Q3(EqualityCheckProblem):
+class Q3(UzCheckProblem):
     """Matritsa-matritsa ko'paytmasi."""
     _hints = [
         "A @ B — matritsa ko'paytmasi. A ning ustunlari soni B ning satrlari soniga teng bo'lishi kerak.",
@@ -49,7 +49,7 @@ class Q3(EqualityCheckProblem):
         return True
 
 
-class Q4(EqualityCheckProblem):
+class Q4(UzCheckProblem):
     """Transponent matritsa."""
     _hints = [
         "A.T — NumPy da transponent.",
@@ -63,7 +63,7 @@ class Q4(EqualityCheckProblem):
         return True
 
 
-class Q5(EqualityCheckProblem):
+class Q5(UzCheckProblem):
     """Matritsa izini (trace) hisoblang."""
     _hints = [
         "Iz (trace) — bosh diagonal elementlari yig'indisi.",
@@ -78,7 +78,7 @@ class Q5(EqualityCheckProblem):
         return True
 
 
-class Q6(EqualityCheckProblem):
+class Q6(UzCheckProblem):
     """Birlik matritsa (Identity matrix)."""
     _hints = [
         "np.eye(n) — n×n birlik matritsa.",
@@ -94,7 +94,7 @@ class Q6(EqualityCheckProblem):
 
 
 # Challenge 1
-class C1_Q1(EqualityCheckProblem):
+class C1_Q1(UzCheckProblem):
     """Matritsa kuchini hisoblang: A^3."""
     _hints = [
         "A @ A @ A yoki np.linalg.matrix_power(A, 3)",
@@ -126,7 +126,7 @@ class C2_Q1(ThoughtExperiment):
     )
 
 
-class C2_Q2(EqualityCheckProblem):
+class C2_Q2(UzCheckProblem):
     """90 daraja aylantirish matritsasini yarating va [1,0] ga qo'llang."""
     _hints = [
         "90° aylantirish: [[cos90, -sin90], [sin90, cos90]] = [[0,-1],[1,0]]",

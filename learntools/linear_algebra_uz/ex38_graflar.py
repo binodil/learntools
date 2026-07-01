@@ -1,6 +1,6 @@
 """Hints and solutions — Dars 10.1: Graflar va Tarmoqlar."""
 import numpy as np
-from learntools.core import EqualityCheckProblem, ThoughtExperiment
+from learntools.linear_algebra_uz.base import UzCheckProblem, ThoughtExperiment
 
 
 # Graf: 4 tugun, 5 qirra
@@ -13,7 +13,7 @@ A_INC = np.array([
 ], dtype=float)
 
 
-class Q1(EqualityCheckProblem):
+class Q1(UzCheckProblem):
     """Insidentlik matritsasi rangini toping."""
     _hints = [
         "np.linalg.matrix_rank dan foydalaning.",
@@ -27,7 +27,7 @@ class Q1(EqualityCheckProblem):
         return True
 
 
-class Q2(EqualityCheckProblem):
+class Q2(UzCheckProblem):
     """A @ x ni doimiy vektor uchun hisoblang."""
     _hints = [
         "Doimiy potensial [1,1,1,1] uchun har bir qirradagi farq 0 bo'ladi.",
@@ -42,7 +42,7 @@ class Q2(EqualityCheckProblem):
         return True
 
 
-class Q3(EqualityCheckProblem):
+class Q3(UzCheckProblem):
     """Graf Laplasiani L = A^T A."""
     _hints = [
         "L = A.T @ A.",
@@ -57,7 +57,7 @@ class Q3(EqualityCheckProblem):
         return True
 
 
-class Q4(EqualityCheckProblem):
+class Q4(UzCheckProblem):
     """Laplasian qatorlari yig'indisi."""
     _hints = [
         "Laplasian har bir qatori yig'indisi nolga teng.",
@@ -71,7 +71,7 @@ class Q4(EqualityCheckProblem):
         return True
 
 
-class Q5(EqualityCheckProblem):
+class Q5(UzCheckProblem):
     """Mustaqil konturlar soni m - n + 1."""
     _hints = [
         "Eyler formulasi: konturlar = qirralar - tugunlar + 1.",
@@ -85,7 +85,7 @@ class Q5(EqualityCheckProblem):
         return True
 
 
-class Q6(EqualityCheckProblem):
+class Q6(UzCheckProblem):
     """A^T y = 0 ni tekshiring (Kirxgof tok qonuni)."""
     _hints = [
         "y null fazoda bo'lsa A.T @ y = 0.",
@@ -100,7 +100,7 @@ class Q6(EqualityCheckProblem):
         return True
 
 
-class C1_Q1(EqualityCheckProblem):
+class C1_Q1(UzCheckProblem):
     """Yangi graf uchun insidentlik matritsasini quring."""
     _hints = [
         "Har bir qirra uchun bitta qator: boshlanishda -1, tugashda +1.",

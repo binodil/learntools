@@ -1,9 +1,9 @@
 """Hints and solutions — Dars 14.1: MLP (Multi-Layer Perceptron)."""
 import numpy as np
-from learntools.core import EqualityCheckProblem, ThoughtExperiment
+from learntools.linear_algebra_uz.base import UzCheckProblem, ThoughtExperiment
 
 
-class Q1(EqualityCheckProblem):
+class Q1(UzCheckProblem):
     """Bitta chiziqli qatlam: y = W x."""
     _hints = [
         "Chiziqli qatlam: y = W @ x.",
@@ -18,7 +18,7 @@ class Q1(EqualityCheckProblem):
         return True
 
 
-class Q2(EqualityCheckProblem):
+class Q2(UzCheckProblem):
     """ReLU aktivatsiyasini elementma-element hisoblang."""
     _hints = [
         "ReLU(z) = max(0, z), har bir komponent uchun.",
@@ -33,7 +33,7 @@ class Q2(EqualityCheckProblem):
         return True
 
 
-class Q3(EqualityCheckProblem):
+class Q3(UzCheckProblem):
     """Ikki qatlamli tarmoq chiqishi."""
     _hints = [
         "Avval h = ReLU(W1 @ x + b1).",
@@ -49,7 +49,7 @@ class Q3(EqualityCheckProblem):
         return True
 
 
-class Q4(EqualityCheckProblem):
+class Q4(UzCheckProblem):
     """Diqqat (attention) skori: dot product q.k / sqrt(d)."""
     _hints = [
         "Skor = q . k (skalyar ko'paytma).",
@@ -64,7 +64,7 @@ class Q4(EqualityCheckProblem):
         return True
 
 
-class Q5(EqualityCheckProblem):
+class Q5(UzCheckProblem):
     """Partiya (batch) oldinga yurishi: Z = W X + b."""
     _hints = [
         "X ustunlari namunalar (n x N).",
@@ -79,7 +79,7 @@ class Q5(EqualityCheckProblem):
         return True
 
 
-class Q6(EqualityCheckProblem):
+class Q6(UzCheckProblem):
     """W ning spektral normasi (eng katta singulyar qiymat)."""
     _hints = [
         "Spektral norma = eng katta singulyar qiymat.",
@@ -95,7 +95,7 @@ class Q6(EqualityCheckProblem):
 
 
 # Challenge 1
-class C1_Q1(EqualityCheckProblem):
+class C1_Q1(UzCheckProblem):
     """Aktivatsiyasiz ikki chiziqli qatlam bitta matritsaga yig'iladi."""
     _hints = [
         "y = W2 (W1 x) = (W2 W1) x.",

@@ -1,9 +1,9 @@
 """Hints and solutions — Dars 11.2: Normalar va Konditsion Sonlar."""
 import numpy as np
-from learntools.core import EqualityCheckProblem, ThoughtExperiment
+from learntools.linear_algebra_uz.base import UzCheckProblem, ThoughtExperiment
 
 
-class Q1(EqualityCheckProblem):
+class Q1(UzCheckProblem):
     """Vektor normalarini hisoblang: 1-norma, 2-norma, ∞-norma."""
     _hints = [
         "np.linalg.norm(v, 1), np.linalg.norm(v, 2), np.linalg.norm(v, np.inf).",
@@ -20,7 +20,7 @@ class Q1(EqualityCheckProblem):
         return True
 
 
-class Q2(EqualityCheckProblem):
+class Q2(UzCheckProblem):
     """Matritsa normalarini hisoblang: Frobenius, operator (2-norma), 1-norma."""
     _hints = [
         "np.linalg.norm(A, 'fro'), np.linalg.norm(A, 2) = sigma_max, np.linalg.norm(A, 1) = max col sum.",
@@ -37,7 +37,7 @@ class Q2(EqualityCheckProblem):
         return True
 
 
-class Q3(EqualityCheckProblem):
+class Q3(UzCheckProblem):
     """Konditsion sonni hisoblang: κ(A) = ||A|| · ||A⁻¹||."""
     _hints = [
         "np.linalg.cond(A) — standart usul. Yoki σ_max / σ_min.",
@@ -51,7 +51,7 @@ class Q3(EqualityCheckProblem):
         return True
 
 
-class Q4(EqualityCheckProblem):
+class Q4(UzCheckProblem):
     """Yomon konditsionlangan sistema uchun xatoni kuzating."""
     _hints = [
         "A = [[1, 1],[1, 1+ε]] — kichik ε uchun juda yomon konditsion.",
@@ -68,7 +68,7 @@ class Q4(EqualityCheckProblem):
         return True
 
 
-class Q5(EqualityCheckProblem):
+class Q5(UzCheckProblem):
     """Perturbatsiya tahlili: ||δx||/||x|| ≤ κ(A) · ||δb||/||b||."""
     _hints = [
         "b ni δb ga o'zgartiring, yechim o'zgarishini kuzating.",
@@ -92,7 +92,7 @@ class Q5(EqualityCheckProblem):
         return True
 
 
-class Q6(EqualityCheckProblem):
+class Q6(UzCheckProblem):
     """Matritsa normasi va xususiy qiymatlar orasidagi bog'liqlik."""
     _hints = [
         "||A||₂ = σ_max(A). Simmetrik A uchun ||A||₂ = max|λᵢ|.",
@@ -111,7 +111,7 @@ class Q6(EqualityCheckProblem):
         return True
 
 
-class C1_Q1(EqualityCheckProblem):
+class C1_Q1(UzCheckProblem):
     """Turli normalar uchun yaxshi konditsionlangan tizim yarating."""
     _hints = [
         "A = Q @ diag(s) @ Q.T: singular qiymatlarni tekshiring. κ = s_max/s_min.",

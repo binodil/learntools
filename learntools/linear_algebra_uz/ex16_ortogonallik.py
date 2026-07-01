@@ -1,9 +1,9 @@
 """Hints and solutions — Dars 4.1: To'rt Fazoning Ortogonalligi."""
 import numpy as np
-from learntools.core import EqualityCheckProblem, ThoughtExperiment
+from learntools.linear_algebra_uz.base import UzCheckProblem, ThoughtExperiment
 
 
-class Q1(EqualityCheckProblem):
+class Q1(UzCheckProblem):
     """Ikki vektor ortogonalmi tekshiring."""
     _hints = [
         "Ikkita vektor ortogonal bo'lishi uchun ularning skalyar ko'paytmasi nolga teng bo'lishi kerak.",
@@ -18,7 +18,7 @@ class Q1(EqualityCheckProblem):
         return True
 
 
-class Q2(EqualityCheckProblem):
+class Q2(UzCheckProblem):
     """Nol fazoni (nullspace) toping: Ax=0."""
     _hints = [
         "scipy.linalg.null_space(A) yoki np.linalg.svd orqali topiladi.",
@@ -35,7 +35,7 @@ class Q2(EqualityCheckProblem):
         return True
 
 
-class Q3(EqualityCheckProblem):
+class Q3(UzCheckProblem):
     """Qator fazosini toping (row space)."""
     _hints = [
         "Qator fazosi = A^T ning ustun fazosi = A ning transponi ustunlarining spani.",
@@ -54,7 +54,7 @@ class Q3(EqualityCheckProblem):
         return True
 
 
-class Q4(EqualityCheckProblem):
+class Q4(UzCheckProblem):
     """Ortogonal to'ldiruvchini (orthogonal complement) tekshiring."""
     _hints = [
         "Agar v nullspace(A) da bo'lsa va w row_space(A) da bo'lsa, u·w = 0.",
@@ -69,7 +69,7 @@ class Q4(EqualityCheckProblem):
         return True
 
 
-class Q5(EqualityCheckProblem):
+class Q5(UzCheckProblem):
     """Matritsaning rangini (rank) toping."""
     _hints = [
         "np.linalg.matrix_rank(A) — rang hisoblovchi funksiya.",
@@ -84,7 +84,7 @@ class Q5(EqualityCheckProblem):
         return True
 
 
-class Q6(EqualityCheckProblem):
+class Q6(UzCheckProblem):
     """Rank-Nullity teoremasi: rang + nullity = n."""
     _hints = [
         "Rang-Nullity: rank(A) + nullity(A) = A ning ustunlar soni.",
@@ -99,7 +99,7 @@ class Q6(EqualityCheckProblem):
         return True
 
 
-class C1_Q1(EqualityCheckProblem):
+class C1_Q1(UzCheckProblem):
     """To'rt kichik fazoning o'lchamlarini toping."""
     _hints = [
         "m×n matritsa uchun: rank(A)=r bo'lsa, to'rtta o'lcham: r, n-r, r, m-r.",

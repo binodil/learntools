@@ -1,9 +1,9 @@
 """Hints and solutions — Dars 8.2: Chiziqli Transformatsiya Matritsasi."""
 import numpy as np
-from learntools.core import EqualityCheckProblem, ThoughtExperiment
+from learntools.linear_algebra_uz.base import UzCheckProblem, ThoughtExperiment
 
 
-class Q1(EqualityCheckProblem):
+class Q1(UzCheckProblem):
     """T(v) = Av matritsasini standart bazada yozing."""
     _hints = [
         "A ning j-ustuni = T(eⱼ), bu erda eⱼ — j-o'q vektori.",
@@ -18,7 +18,7 @@ class Q1(EqualityCheckProblem):
         return True
 
 
-class Q2(EqualityCheckProblem):
+class Q2(UzCheckProblem):
     """Baza o'zgartirish matritsasini toping: P_{B←S} (standartdan B bazaga)."""
     _hints = [
         "P_{B←S} matritsasining ustunlari — standart baza vektorlarining B bazasidagi koordinatalari.",
@@ -37,7 +37,7 @@ class Q2(EqualityCheckProblem):
         return True
 
 
-class Q3(EqualityCheckProblem):
+class Q3(UzCheckProblem):
     """T matritsasini B bazasida toping: A_B = P⁻¹ A P."""
     _hints = [
         "A_B = P⁻¹ A P, bu erda P — baza o'tish matritsasi.",
@@ -52,7 +52,7 @@ class Q3(EqualityCheckProblem):
         return True
 
 
-class Q4(EqualityCheckProblem):
+class Q4(UzCheckProblem):
     """O'xshash matritsalar bir xil xususiy qiymatlarga ega ekanini tekshiring."""
     _hints = [
         "A_B = P⁻¹ A P bo'lsa, A va A_B xususiy qiymatlari teng.",
@@ -73,7 +73,7 @@ class Q4(EqualityCheckProblem):
         return True
 
 
-class Q5(EqualityCheckProblem):
+class Q5(UzCheckProblem):
     """T ning ker(T) (yadrosi) ni toping."""
     _hints = [
         "ker(T) = null space of A. np.linalg.null_space(A) yoki scipy.linalg.null_space.",
@@ -93,7 +93,7 @@ class Q5(EqualityCheckProblem):
         return True
 
 
-class Q6(EqualityCheckProblem):
+class Q6(UzCheckProblem):
     """T ning Im(T) (obrazi) rangini toping."""
     _hints = [
         "Im(T) = column space of A. Rangi = np.linalg.matrix_rank(A).",
@@ -108,7 +108,7 @@ class Q6(EqualityCheckProblem):
         return True
 
 
-class C1_Q1(EqualityCheckProblem):
+class C1_Q1(UzCheckProblem):
     """Xususiy vektorlar bazasida diagonallashtirish: A = PΛP⁻¹."""
     _hints = [
         "vals, P = np.linalg.eig(A). Λ = diag(vals), P — xususiy vektorlar ustun sifatida.",

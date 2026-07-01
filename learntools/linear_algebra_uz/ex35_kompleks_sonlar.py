@@ -1,9 +1,9 @@
 """Hints and solutions — Dars 9.1: Kompleks Sonlar."""
 import numpy as np
-from learntools.core import EqualityCheckProblem, ThoughtExperiment
+from learntools.linear_algebra_uz.base import UzCheckProblem, ThoughtExperiment
 
 
-class Q1(EqualityCheckProblem):
+class Q1(UzCheckProblem):
     """z = a + bi kompleks sonning modulini va argumentini toping."""
     _hints = ["abs(z) yoki np.abs(z) — modul. np.angle(z) — argument (radyanda)."]
     _solution = "mod = np.abs(z); arg = np.angle(z)"
@@ -16,7 +16,7 @@ class Q1(EqualityCheckProblem):
         return True
 
 
-class Q2(EqualityCheckProblem):
+class Q2(UzCheckProblem):
     """z1 * z2 va z1 / z2 ni hisoblang."""
     _hints = ["Python kompleks sonlar bilan to'g'ridan-to'g'ri ishlaydi: z1 * z2, z1 / z2."]
     _solution = "prod = z1 * z2; quot = z1 / z2"
@@ -29,7 +29,7 @@ class Q2(EqualityCheckProblem):
         return True
 
 
-class Q3(EqualityCheckProblem):
+class Q3(UzCheckProblem):
     """Euler formulasi: e^{iθ} = cosθ + i sinθ ni tekshiring."""
     _hints = [
         "np.exp(1j * theta) — kompleks eksponenta.",
@@ -44,7 +44,7 @@ class Q3(EqualityCheckProblem):
         return True
 
 
-class Q4(EqualityCheckProblem):
+class Q4(UzCheckProblem):
     """Kompleks konjugat va |z|² = z * z.conj() ni tekshiring."""
     _hints = ["z.conjugate() yoki np.conj(z). |z|² = z * z.conj() = a² + b²."]
     _solution = "z_conj = np.conj(z); mod_sq = z * np.conj(z)"
@@ -58,7 +58,7 @@ class Q4(EqualityCheckProblem):
         return True
 
 
-class Q5(EqualityCheckProblem):
+class Q5(UzCheckProblem):
     """De Moivre teoremasi: (r*e^{iθ})^n = r^n * e^{inθ}."""
     _hints = ["z**n — Python da kompleks son daraja. yoki np.abs(z)**n * np.exp(1j*np.angle(z)*n)."]
     _solution = "zn = z ** n  # yoki: np.abs(z)**n * np.exp(1j * np.angle(z) * n)"
@@ -70,7 +70,7 @@ class Q5(EqualityCheckProblem):
         return True
 
 
-class Q6(EqualityCheckProblem):
+class Q6(UzCheckProblem):
     """n-tartibli birlikning ildizlarini toping: z^n = 1."""
     _hints = [
         "z_k = e^{2πik/n}, k = 0,1,...,n-1.",
@@ -89,7 +89,7 @@ class Q6(EqualityCheckProblem):
         return True
 
 
-class C1_Q1(EqualityCheckProblem):
+class C1_Q1(UzCheckProblem):
     """DFT matritsasini yarating: F_{jk} = e^{-2πijk/n} / sqrt(n)."""
     _hints = [
         "F[j,k] = np.exp(-2j*np.pi*j*k/n) / np.sqrt(n).",

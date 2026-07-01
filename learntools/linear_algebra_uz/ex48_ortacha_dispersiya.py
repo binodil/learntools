@@ -1,9 +1,9 @@
 """Hints and solutions — Dars 12.1: O'rtacha, Dispersiya va Ehtimollik."""
 import numpy as np
-from learntools.core import EqualityCheckProblem, ThoughtExperiment
+from learntools.linear_algebra_uz.base import UzCheckProblem, ThoughtExperiment
 
 
-class Q1(EqualityCheckProblem):
+class Q1(UzCheckProblem):
     """O'rtacha (mean) va dispersiyani (variance) hisoblang."""
     _hints = ["np.mean(x), np.var(x) yoki np.std(x)**2."]
     _solution = "mu = np.mean(x); sigma2 = np.var(x)"
@@ -16,7 +16,7 @@ class Q1(EqualityCheckProblem):
         return True
 
 
-class Q2(EqualityCheckProblem):
+class Q2(UzCheckProblem):
     """Standart og'ish (std) va normallashtirish: z = (x - mu)/sigma."""
     _hints = ["sigma = np.std(x). z = (x - mu) / sigma."]
     _solution = "sigma = np.std(x); z = (x - np.mean(x)) / sigma"
@@ -33,7 +33,7 @@ class Q2(EqualityCheckProblem):
         return True
 
 
-class Q3(EqualityCheckProblem):
+class Q3(UzCheckProblem):
     """Diskret taqsimot uchun kutilgan qiymat E[X] = sum(x_i * p_i)."""
     _hints = ["E[X] = np.dot(values, probs)."]
     _solution = "E_X = np.dot(values, probs)"
@@ -45,7 +45,7 @@ class Q3(EqualityCheckProblem):
         return True
 
 
-class Q4(EqualityCheckProblem):
+class Q4(UzCheckProblem):
     """Bernoulli taqsimoti: P(X=1) = p. E[X] = p, Var(X) = p(1-p)."""
     _hints = ["E[X] = p. Var(X) = p*(1-p)."]
     _solution = "E = p; Var = p * (1 - p)"
@@ -58,7 +58,7 @@ class Q4(EqualityCheckProblem):
         return True
 
 
-class Q5(EqualityCheckProblem):
+class Q5(UzCheckProblem):
     """Bayes teoremasi: P(A|B) = P(B|A)*P(A) / P(B)."""
     _hints = ["P(A|B) = P(B|A)*P(A) / (P(B|A)*P(A) + P(B|notA)*P(notA))."]
     _solution = "P_A_given_B = (P_B_given_A * P_A) / (P_B_given_A*P_A + P_B_given_notA*(1-P_A))"
@@ -71,7 +71,7 @@ class Q5(EqualityCheckProblem):
         return True
 
 
-class Q6(EqualityCheckProblem):
+class Q6(UzCheckProblem):
     """Markaziy limit teoremasi: n ta namunaning o'rtachasi normal taqsimotga yaqinlashadi."""
     _hints = [
         "n=1000 ta namunaning o'rtachasi: mu_bar = np.mean(samples, axis=1). STD ≈ sigma/sqrt(n).",
@@ -90,7 +90,7 @@ class Q6(EqualityCheckProblem):
         return True
 
 
-class C1_Q1(EqualityCheckProblem):
+class C1_Q1(UzCheckProblem):
     """Chiziqli regressiyada MLE = OLS: nima uchun?"""
     _hints = [
         "y = Xb + e, e ~ N(0, sigma^2 I). Log-likelihood ni maksimizatsiya → ||y - Xb||^2 minimizatsiya.",

@@ -1,9 +1,9 @@
 """Hints and solutions — Dars 8.1: Chiziqli Transformatsiya g'oyasi."""
 import numpy as np
-from learntools.core import EqualityCheckProblem, ThoughtExperiment
+from learntools.linear_algebra_uz.base import UzCheckProblem, ThoughtExperiment
 
 
-class Q1(EqualityCheckProblem):
+class Q1(UzCheckProblem):
     """T(v) = Av chiziqli ekanini tekshiring: T(u+v) = T(u) + T(v)."""
     _hints = [
         "T chiziqli bo'lsa: T(u+v) = T(u) + T(v) va T(cu) = cT(u).",
@@ -18,7 +18,7 @@ class Q1(EqualityCheckProblem):
         return True
 
 
-class Q2(EqualityCheckProblem):
+class Q2(UzCheckProblem):
     """T(cv) = cT(v) homogenlik shartini tekshiring."""
     _hints = [
         "np.allclose(A @ (c * v), c * (A @ v))",
@@ -32,7 +32,7 @@ class Q2(EqualityCheckProblem):
         return True
 
 
-class Q3(EqualityCheckProblem):
+class Q3(UzCheckProblem):
     """Proyeksiya transformatsiyasining matritsasini toping."""
     _hints = [
         "a yo'nalishiga proyeksiya: P = a aᵀ / aᵀa. Har bir vektor uchun T(v) = Pv.",
@@ -48,7 +48,7 @@ class Q3(EqualityCheckProblem):
         return True
 
 
-class Q4(EqualityCheckProblem):
+class Q4(UzCheckProblem):
     """O'q atrofida aks ettirish (reflection) matritsasini hisoblang."""
     _hints = [
         "x-o'q atrofida aks ettirish: [[1,0],[0,-1]]. Umumiy: R = 2P - I.",
@@ -66,7 +66,7 @@ class Q4(EqualityCheckProblem):
         return True
 
 
-class Q5(EqualityCheckProblem):
+class Q5(UzCheckProblem):
     """2D da burchak θ bo'yicha aylantirish matritsasini toping."""
     _hints = [
         "Rotatsiya matritsasi: [[cos θ, -sin θ], [sin θ, cos θ]].",
@@ -84,7 +84,7 @@ class Q5(EqualityCheckProblem):
         return True
 
 
-class Q6(EqualityCheckProblem):
+class Q6(UzCheckProblem):
     """Ikki transformatsiyaning kompozitsiyasini hisoblang: T₂ ∘ T₁."""
     _hints = [
         "T₂(T₁(v)) = A₂ (A₁ v) = (A₂ A₁) v. Kompozitsiya: C = A₂ @ A₁.",
@@ -98,7 +98,7 @@ class Q6(EqualityCheckProblem):
         return True
 
 
-class C1_Q1(EqualityCheckProblem):
+class C1_Q1(UzCheckProblem):
     """3D da X, Y, Z o'qlar atrofida rotatsiya kompozitsiyasi."""
     _hints = [
         "Rx, Ry, Rz — mos o'qlar atrofida rotatsiya matritsalari.",

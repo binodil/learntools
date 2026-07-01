@@ -1,13 +1,13 @@
 """Hints and solutions — Dars 10.2: Muhandislikda Matritsalar."""
 import numpy as np
-from learntools.core import EqualityCheckProblem, ThoughtExperiment
+from learntools.linear_algebra_uz.base import UzCheckProblem, ThoughtExperiment
 
 
 def second_diff(n):
     return 2*np.eye(n) - np.eye(n, k=1) - np.eye(n, k=-1)
 
 
-class Q1(EqualityCheckProblem):
+class Q1(UzCheckProblem):
     """4x4 ikkinchi farq matritsasini quring."""
     _hints = [
         "Diagonalda 2, qo'shni diagonallarda -1.",
@@ -22,7 +22,7 @@ class Q1(EqualityCheckProblem):
         return True
 
 
-class Q2(EqualityCheckProblem):
+class Q2(UzCheckProblem):
     """K xos qiymatlari musbatligini tekshiring (musbat aniqlik)."""
     _hints = [
         "np.linalg.eigvalsh xos qiymatlarni qaytaradi.",
@@ -36,7 +36,7 @@ class Q2(EqualityCheckProblem):
         return True
 
 
-class Q3(EqualityCheckProblem):
+class Q3(UzCheckProblem):
     """K u = f tizimini yeching."""
     _hints = [
         "np.linalg.solve(K, f).",
@@ -52,7 +52,7 @@ class Q3(EqualityCheckProblem):
         return True
 
 
-class Q4(EqualityCheckProblem):
+class Q4(UzCheckProblem):
     """Potensial energiyani hisoblang."""
     _hints = [
         "P = 0.5 * u^T K u - u^T f.",
@@ -68,7 +68,7 @@ class Q4(EqualityCheckProblem):
         return True
 
 
-class Q5(EqualityCheckProblem):
+class Q5(UzCheckProblem):
     """K simmetrikligini tekshiring."""
     _hints = [
         "Simmetrik: K == K.T.",
@@ -82,7 +82,7 @@ class Q5(EqualityCheckProblem):
         return True
 
 
-class Q6(EqualityCheckProblem):
+class Q6(UzCheckProblem):
     """K = A^T A: farq matritsasi A dan K ni quring."""
     _hints = [
         "A — 5x4 oldinga farq matritsasi (mahkamlangan chegaralar bilan).",
@@ -97,7 +97,7 @@ class Q6(EqualityCheckProblem):
         return True
 
 
-class C1_Q1(EqualityCheckProblem):
+class C1_Q1(UzCheckProblem):
     """Erkin chegara: singular K ni quring va rangini toping."""
     _hints = [
         "Erkin-erkin chegarada K ning birinchi va oxirgi diagonali 1.",

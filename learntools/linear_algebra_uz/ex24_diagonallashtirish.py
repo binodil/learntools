@@ -1,9 +1,9 @@
 """Hints and solutions — Dars 6.2: Matritsani Diagonallashtirish."""
 import numpy as np
-from learntools.core import EqualityCheckProblem, ThoughtExperiment
+from learntools.linear_algebra_uz.base import UzCheckProblem, ThoughtExperiment
 
 
-class Q1(EqualityCheckProblem):
+class Q1(UzCheckProblem):
     """S matritsani xususiy vektorlardan quring."""
     _hints = [
         "S ustunlari — chiziqli mustaqil xususiy vektorlar.",
@@ -22,7 +22,7 @@ class Q1(EqualityCheckProblem):
         return True
 
 
-class Q2(EqualityCheckProblem):
+class Q2(UzCheckProblem):
     """Lambda diagonal matritsasini quring."""
     _hints = [
         "Lambda = diag(lambda_1, ..., lambda_n).",
@@ -37,7 +37,7 @@ class Q2(EqualityCheckProblem):
         return True
 
 
-class Q3(EqualityCheckProblem):
+class Q3(UzCheckProblem):
     """A = S Lambda S^{-1} ni qayta tiklang."""
     _hints = [
         "A = S @ Lambda @ inv(S).",
@@ -51,7 +51,7 @@ class Q3(EqualityCheckProblem):
         return True
 
 
-class Q4(EqualityCheckProblem):
+class Q4(UzCheckProblem):
     """A^k = S Lambda^k S^{-1}."""
     _hints = [
         "Lambda^k — diagonal elementlarni k-darajaga ko'tarish.",
@@ -66,7 +66,7 @@ class Q4(EqualityCheckProblem):
         return True
 
 
-class Q5(EqualityCheckProblem):
+class Q5(UzCheckProblem):
     """Fibonachchi: F_10 ni matritsa darajasi bilan."""
     _hints = [
         "F = [[1,1],[1,0]], F^n[0,1] = F_n.",
@@ -80,7 +80,7 @@ class Q5(EqualityCheckProblem):
         return True
 
 
-class Q6(EqualityCheckProblem):
+class Q6(UzCheckProblem):
     """Defektli matritsa: yetarli xususiy vektor yo'q."""
     _hints = [
         "[[2,1],[0,2]] takroriy lambda=2 ga ega, lekin bitta xususiy vektor.",
@@ -94,7 +94,7 @@ class Q6(EqualityCheckProblem):
         return True
 
 
-class C1_Q1(EqualityCheckProblem):
+class C1_Q1(UzCheckProblem):
     """Diagonallashtirish orqali A^k ning katta k uchun o'sishi."""
     _hints = [
         "Eng katta |lambda| ustun keladi.",

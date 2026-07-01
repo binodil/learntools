@@ -1,13 +1,13 @@
 """Hints and solutions — Dars 10.3: Markov Matritsalari."""
 import numpy as np
-from learntools.core import EqualityCheckProblem, ThoughtExperiment
+from learntools.linear_algebra_uz.base import UzCheckProblem, ThoughtExperiment
 
 
 P_MARKOV = np.array([[0.9, 0.2],
                      [0.1, 0.8]])
 
 
-class Q1(EqualityCheckProblem):
+class Q1(UzCheckProblem):
     """Markov matritsasi ustun yig'indilarini tekshiring."""
     _hints = [
         "Har bir ustun yig'indisi 1 ga teng bo'lishi kerak.",
@@ -21,7 +21,7 @@ class Q1(EqualityCheckProblem):
         return True
 
 
-class Q2(EqualityCheckProblem):
+class Q2(UzCheckProblem):
     """Turg'un holatni xos vektordan toping."""
     _hints = [
         "lambda=1 ga mos xos vektorni toping va yig'indisi 1 ga normalang.",
@@ -40,7 +40,7 @@ class Q2(EqualityCheckProblem):
         return True
 
 
-class Q3(EqualityCheckProblem):
+class Q3(UzCheckProblem):
     """P x* = x* ekanini tekshiring."""
     _hints = [
         "Turg'un holat uchun P @ x_star = x_star.",
@@ -55,7 +55,7 @@ class Q3(EqualityCheckProblem):
         return True
 
 
-class Q4(EqualityCheckProblem):
+class Q4(UzCheckProblem):
     """50 iteratsiyadan keyingi taqsimot."""
     _hints = [
         "x_0 = [1,0] dan boshlab P ni 50 marta qo'llang.",
@@ -73,7 +73,7 @@ class Q4(EqualityCheckProblem):
         return True
 
 
-class Q5(EqualityCheckProblem):
+class Q5(UzCheckProblem):
     """Markov matritsasining eng katta xos qiymati 1 ga tengligini tekshiring."""
     _hints = [
         "np.linalg.eigvals dan foydalaning.",
@@ -87,7 +87,7 @@ class Q5(EqualityCheckProblem):
         return True
 
 
-class Q6(EqualityCheckProblem):
+class Q6(UzCheckProblem):
     """P^k ni hisoblang (matritsa darajasi)."""
     _hints = [
         "np.linalg.matrix_power(P, k) dan foydalaning.",
@@ -102,7 +102,7 @@ class Q6(EqualityCheckProblem):
         return True
 
 
-class C1_Q1(EqualityCheckProblem):
+class C1_Q1(UzCheckProblem):
     """Uchta holatli Markov matritsasi turg'un holati."""
     _hints = [
         "Ustunlari 1 ga yig'iladigan 3x3 matritsa quring.",

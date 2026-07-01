@@ -1,9 +1,9 @@
 """Hints and solutions — Dars 6.5: Musbat Aniq Matritsalar."""
 import numpy as np
-from learntools.core import EqualityCheckProblem, ThoughtExperiment
+from learntools.linear_algebra_uz.base import UzCheckProblem, ThoughtExperiment
 
 
-class Q1(EqualityCheckProblem):
+class Q1(UzCheckProblem):
     """Musbat aniqlikni xususiy qiymatlar orqali tekshiring."""
     _hints = [
         "Musbat aniq (PD): barcha xususiy qiymatlar > 0.",
@@ -20,7 +20,7 @@ class Q1(EqualityCheckProblem):
         return True
 
 
-class Q2(EqualityCheckProblem):
+class Q2(UzCheckProblem):
     """xᵀAx > 0 ni tekshiring (musbat aniqlikning ta'rifi)."""
     _hints = [
         "xᵀAx = x @ A @ x. Har qanday nol bo'lmagan x uchun bu musbat bo'lishi kerak.",
@@ -34,7 +34,7 @@ class Q2(EqualityCheckProblem):
         return True
 
 
-class Q3(EqualityCheckProblem):
+class Q3(UzCheckProblem):
     """Cholesky yoyilmasi: A = LLᵀ."""
     _hints = [
         "np.linalg.cholesky(A) — pastki uchburchak L ni beradi, A = L @ L.T.",
@@ -54,7 +54,7 @@ class Q3(EqualityCheckProblem):
         return True
 
 
-class Q4(EqualityCheckProblem):
+class Q4(UzCheckProblem):
     """Cholesky bilan Ax=b yechish."""
     _hints = [
         "A = LLᵀ, shuning uchun LLᵀx = b. Avval Ly = b, keyin Lᵀx = y.",
@@ -73,7 +73,7 @@ class Q4(EqualityCheckProblem):
         return True
 
 
-class Q5(EqualityCheckProblem):
+class Q5(UzCheckProblem):
     """Musbat aniq bo'lish shartlari: barcha yetakchi minorlar > 0."""
     _hints = [
         "Sylvester mezoni: A_{1×1}, A_{2×2}, A_{3×3} determinantlari > 0.",
@@ -89,7 +89,7 @@ class Q5(EqualityCheckProblem):
         return True
 
 
-class Q6(EqualityCheckProblem):
+class Q6(UzCheckProblem):
     """AᵀA musbat aniq ekanini tekshiring (A to'liq rangda bo'lsa)."""
     _hints = [
         "A to'liq ustun rangida bo'lsa (rank = n), AᵀA musbat aniq.",
@@ -104,7 +104,7 @@ class Q6(EqualityCheckProblem):
         return True
 
 
-class C1_Q1(EqualityCheckProblem):
+class C1_Q1(UzCheckProblem):
     """Cholesky bilan kovariatsiya matritsasidan namunaviy vektor hosil qiling."""
     _hints = [
         "Σ = LLᵀ bo'lsa, x = L @ z (z ~ N(0,I)) → x ~ N(0,Σ).",

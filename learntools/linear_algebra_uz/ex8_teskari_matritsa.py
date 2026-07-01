@@ -1,9 +1,9 @@
 """Hints and solutions — Dars 2.5: Teskari Matritsalar."""
 import numpy as np
-from learntools.core import EqualityCheckProblem, ThoughtExperiment
+from learntools.linear_algebra_uz.base import UzCheckProblem, ThoughtExperiment
 
 
-class Q1(EqualityCheckProblem):
+class Q1(UzCheckProblem):
     """Teskari matritsani hisoblang."""
     _hints = [
         "np.linalg.inv(A) — A^{-1} ni hisoblaydi.",
@@ -18,7 +18,7 @@ class Q1(EqualityCheckProblem):
         return True
 
 
-class Q2(EqualityCheckProblem):
+class Q2(UzCheckProblem):
     """Tekshiring: A @ A^{-1} = I."""
     _hints = [
         "A @ np.linalg.inv(A) ≈ np.eye(n) bo'lishi kerak.",
@@ -33,7 +33,7 @@ class Q2(EqualityCheckProblem):
         return True
 
 
-class Q3(EqualityCheckProblem):
+class Q3(UzCheckProblem):
     """(AB)^{-1} = B^{-1} A^{-1}."""
     _hints = [
         "(AB)^{-1} = B^{-1} A^{-1} — tartibga e'tibor!",
@@ -48,7 +48,7 @@ class Q3(EqualityCheckProblem):
         return True
 
 
-class Q4(EqualityCheckProblem):
+class Q4(UzCheckProblem):
     """Gauss-Jordan usuli bilan teskari matritsa."""
     _hints = [
         "[A | I] ni kengaytirilgan matritsaga qo'ying.",
@@ -84,7 +84,7 @@ class Q5(ThoughtExperiment):
 
 
 # Challenge 1
-class C1_Q1(EqualityCheckProblem):
+class C1_Q1(UzCheckProblem):
     """2x2 matritsa uchun analitik formula."""
     _hints = [
         "A = [[a,b],[c,d]] uchun: A^-1 = 1/det * [[d,-b],[-c,a]]",

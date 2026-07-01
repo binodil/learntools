@@ -1,9 +1,9 @@
 """Hints and solutions — Dars 7.4: SVD Geometriyasi."""
 import numpy as np
-from learntools.core import EqualityCheckProblem, ThoughtExperiment
+from learntools.linear_algebra_uz.base import UzCheckProblem, ThoughtExperiment
 
 
-class Q1(EqualityCheckProblem):
+class Q1(UzCheckProblem):
     """A = UΣVᵀ yoyilmasini topib, shakllarini tekshiring."""
     _hints = [
         "U, s, Vt = np.linalg.svd(A). s — singular qiymatlar vektori.",
@@ -20,7 +20,7 @@ class Q1(EqualityCheckProblem):
         return True
 
 
-class Q2(EqualityCheckProblem):
+class Q2(UzCheckProblem):
     """A ni UΣVᵀ dan qayta tiklang."""
     _hints = [
         "A = U @ np.diag(s) @ Vt. np.diag(s) — diagonal matritsa.",
@@ -33,7 +33,7 @@ class Q2(EqualityCheckProblem):
         return True
 
 
-class Q3(EqualityCheckProblem):
+class Q3(UzCheckProblem):
     """U va V ortonormal ekanini tekshiring."""
     _hints = [
         "U ortogonal bo'lsa UᵀU = I. np.allclose(U.T @ U, np.eye(k)) ni tekshiring.",
@@ -57,7 +57,7 @@ class Q3(EqualityCheckProblem):
         return True
 
 
-class Q4(EqualityCheckProblem):
+class Q4(UzCheckProblem):
     """A ning konditsion soni (condition number) ni toping."""
     _hints = [
         "Konditsion son = σ_max / σ_min. Singular qiymatlar: svd dan s.",
@@ -72,7 +72,7 @@ class Q4(EqualityCheckProblem):
         return True
 
 
-class Q5(EqualityCheckProblem):
+class Q5(UzCheckProblem):
     """A ning psevdoteskari (Moore-Penrose) ni SVD bilan hisoblang."""
     _hints = [
         "A⁺ = V Σ⁺ Uᵀ. Σ⁺ da nol bo'lmagan singular qiymatlar 1/σᵢ bilan almashtiriladi.",
@@ -90,7 +90,7 @@ class Q5(EqualityCheckProblem):
         return True
 
 
-class Q6(EqualityCheckProblem):
+class Q6(UzCheckProblem):
     """Rank-1 taqribdan foydalanib A ni eng yaxshi k-rangdagi taqqoslash."""
     _hints = [
         "A_k = U[:,:k] @ diag(s[:k]) @ Vt[:k,:]. Eckart-Young teoremasi: bu eng yaxshi rang-k taqrib.",
@@ -113,7 +113,7 @@ class Q6(EqualityCheckProblem):
         return True
 
 
-class C1_Q1(EqualityCheckProblem):
+class C1_Q1(UzCheckProblem):
     """SVD bilan chiziqli tenglamalar sistemasini tekshiring (over/under-determined)."""
     _hints = [
         "Agar A to'liq rangda bo'lsa: x = A_pinv @ b. Aks holda eng kichik normali yechim.",

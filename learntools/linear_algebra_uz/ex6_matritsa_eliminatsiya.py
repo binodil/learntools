@@ -1,9 +1,9 @@
 """Hints and solutions — Dars 2.3: Matritsali Eliminatsiya."""
 import numpy as np
-from learntools.core import EqualityCheckProblem, ThoughtExperiment
+from learntools.linear_algebra_uz.base import UzCheckProblem, ThoughtExperiment
 
 
-class Q1(EqualityCheckProblem):
+class Q1(UzCheckProblem):
     """Elementar matritsa E21 ni yarating."""
     _hints = [
         "E21 = I, faqat (2,1) pozitsiyasida -m bo'ladi.",
@@ -24,7 +24,7 @@ class Q1(EqualityCheckProblem):
         return True
 
 
-class Q2(EqualityCheckProblem):
+class Q2(UzCheckProblem):
     """LU parchalash."""
     _hints = [
         "scipy.linalg.lu(A) → P, L, U ni qaytaradi.",
@@ -62,7 +62,7 @@ class Q3(ThoughtExperiment):
 
 
 # Challenge 1
-class C1_Q1(EqualityCheckProblem):
+class C1_Q1(UzCheckProblem):
     """L va U ni qo'lda hisoblang."""
     _hints = [
         "L ning diagonal elementlari 1, L[i,j] = mij (multiplikatorlar).",

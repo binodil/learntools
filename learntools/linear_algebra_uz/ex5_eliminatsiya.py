@@ -1,6 +1,6 @@
 """Hints and solutions — Dars 2.2: Eliminatsiya G'oyasi."""
 import numpy as np
-from learntools.core import EqualityCheckProblem, ThoughtExperiment
+from learntools.linear_algebra_uz.base import UzCheckProblem, ThoughtExperiment
 
 
 class Q1(ThoughtExperiment):
@@ -17,7 +17,7 @@ class Q1(ThoughtExperiment):
     )
 
 
-class Q2(EqualityCheckProblem):
+class Q2(UzCheckProblem):
     """Gauss eliminatsiyasi — bitta qadam."""
     _hints = [
         "Birinchi satrdan m=A[1,0]/A[0,0] multiplikatorini hisoblang.",
@@ -40,7 +40,7 @@ class Q2(EqualityCheckProblem):
         return True
 
 
-class Q3(EqualityCheckProblem):
+class Q3(UzCheckProblem):
     """To'liq Gauss eliminatsiyasi (yuqori uchburchak ko'rinish)."""
     _hints = [
         "Har bir pivot ustun uchun quyidagi barcha satrlardan o'sha ustun elementini nolga aylantiring.",
@@ -64,7 +64,7 @@ class Q3(EqualityCheckProblem):
 
 
 # Challenge 1
-class C1_Q1(EqualityCheckProblem):
+class C1_Q1(UzCheckProblem):
     """Pivotni toping va nolni aniqlang."""
     _hints = [
         "Pivot — ustundagi noldan farqli birinchi element.",

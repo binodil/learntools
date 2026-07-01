@@ -1,9 +1,9 @@
 """Hints and solutions — Dars 4.3: Kichik Kvadratlar Yaqinlashuvi."""
 import numpy as np
-from learntools.core import EqualityCheckProblem, ThoughtExperiment
+from learntools.linear_algebra_uz.base import UzCheckProblem, ThoughtExperiment
 
 
-class Q1(EqualityCheckProblem):
+class Q1(UzCheckProblem):
     """Normal tenglamani (AᵀAx̂ = Aᵀb) yeching."""
     _hints = [
         "Normal tenglama: AᵀA x̂ = Aᵀb. np.linalg.solve(A.T@A, A.T@b) dan foydalaning.",
@@ -18,7 +18,7 @@ class Q1(EqualityCheckProblem):
         return True
 
 
-class Q2(EqualityCheckProblem):
+class Q2(UzCheckProblem):
     """Qoldiq normasi ||b - Ax̂||² ni hisoblang."""
     _hints = [
         "Avval x̂ ni toping, keyin e = b - A @ x_hat, so'ng np.linalg.norm(e)**2.",
@@ -33,7 +33,7 @@ class Q2(EqualityCheckProblem):
         return True
 
 
-class Q3(EqualityCheckProblem):
+class Q3(UzCheckProblem):
     """Chiziqli regressiya uchun koeffitsiyentlarni toping: y = a + bx."""
     _hints = [
         "A = np.column_stack([np.ones(n), x]) dizayn matritsasi.",
@@ -49,7 +49,7 @@ class Q3(EqualityCheckProblem):
         return True
 
 
-class Q4(EqualityCheckProblem):
+class Q4(UzCheckProblem):
     """Kvadratik regressiya: y = a + bx + cx² uchun koeffitsiyentlarni toping."""
     _hints = [
         "A = np.column_stack([np.ones(n), x, x**2]) — 3 ustunli dizayn matritsasi.",
@@ -65,7 +65,7 @@ class Q4(EqualityCheckProblem):
         return True
 
 
-class Q5(EqualityCheckProblem):
+class Q5(UzCheckProblem):
     """R² (determinatsiya koeffitsiyenti) ni hisoblang."""
     _hints = [
         "R² = 1 - SS_res/SS_tot, bu erda SS_res = ||b - Ax̂||², SS_tot = ||b - mean(b)||².",
@@ -88,7 +88,7 @@ class Q5(EqualityCheckProblem):
         return True
 
 
-class Q6(EqualityCheckProblem):
+class Q6(UzCheckProblem):
     """Og'irlikli kichik kvadratlar: W og'irlik matritsasi bilan WA x̂ = Wb."""
     _hints = [
         "Og'irlikli normal tenglama: AᵀWAx̂ = AᵀWb.",
@@ -104,7 +104,7 @@ class Q6(EqualityCheckProblem):
         return True
 
 
-class C1_Q1(EqualityCheckProblem):
+class C1_Q1(UzCheckProblem):
     """Polynomial regressiya va eng yaxshi daraja tanlash."""
     _hints = [
         "Har bir daraja uchun R² ni hisoblang va eng yuqori R² li darajani tanlang.",
